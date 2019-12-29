@@ -3248,3 +3248,7 @@
   display: none !important; }
 .charsheet .sheet-darkerdungeons .sheet-field-untoggle[value="1"] + * {
   display: none !important; }
+
+.charsheet .sheet-darkerdungeons span.sheet-allow-paragraphs {
+  white-space: pre-line;
+}

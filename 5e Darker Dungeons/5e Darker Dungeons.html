@@ -661,7 +661,7 @@
 													<span name="attr_name"></span>
 												</div>
 												<div class="sheet-npc-trait-desc">
-													<span name="attr_desc"></span>
+													<span class="sheet-allow-paragraphs" name="attr_desc"></span>
 												</div>
 											</div>
 										</div>
@@ -761,7 +761,7 @@
 														</div>
 													</div>
 													<div class="sheet-fieldset-item-npcaction-checked-description">
-														<span name="attr_description"></span>
+														<span class="sheet-allow-paragraphs" name="attr_description"></span>
 													</div>
 												</button>
 												<input type="hidden" name="attr_rollbase">
@@ -806,7 +806,7 @@
 														<span name="attr_name"></span>
 													</div>
 													<div class="sheet-npc-reaction-description">
-														<span name="attr_desc"></span>
+														<span class="sheet-allow-paragraphs" name="attr_desc"></span>
 													</div>
 												</div>
 											</div>
@@ -911,7 +911,7 @@
 														</div>
 													</div>
 													<div class="sheet-fieldset-item-npcaction-checked-description">
-														<span name="attr_description"></span>
+														<span class="sheet-allow-paragraphs" name="attr_description"></span>
 													</div>
 												</button>
 												<input type="hidden" name="attr_rollbase">
@@ -2008,7 +2008,7 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
+										<button type="roll" name="roll_saving_throw_attack" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
 									</div>
 									<div class="sheet-container-body">
 										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
@@ -2590,7 +2590,7 @@
 																<input type="checkbox" name="attr_active" value="1" checked="checked">
 																<span></span>
 															</div>
-															<span name="attr_description"></span>
+															<span class="sheet-allow-paragraphs" name="attr_description"></span>
 														</div>
 													</div>
 												</div>
@@ -2959,7 +2959,7 @@
 																	<span name="attr_source"></span>
 																	<span name="attr_source_type"></span>
 																</span>
-																<span name="attr_description"></span>
+																<span class="sheet-allow-paragraphs" name="attr_description"></span>
 															</div>
 															<div>
 														</button>
