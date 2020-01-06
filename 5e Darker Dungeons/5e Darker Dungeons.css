@@ -1832,7 +1832,9 @@
         font-weight: normal;
         font-size: inherit;
         width: auto;
-        opacity: .5; }
+        opacity: .5;
+        text-shadow: none; /* makes the text look blurry otherwise in combination witht the opacity */
+      }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw button:hover,
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button:hover {
         background: #e5fffb;
@@ -1886,7 +1888,8 @@
         margin-left: 2px; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(4) {
         opacity: .5;
-        margin-left: 2px; }
+        margin-left: 2px;
+        text-shadow: none; }
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(4)::before {
           content: '('; }
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(4)::after {
@@ -2893,7 +2896,7 @@
       margin-top: 5px;
       font-size: 9px; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-source {
-      opacity: .5; }
+      opacity: .7; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-source::before {
         content: "("; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-source::after {
