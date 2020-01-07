@@ -2610,8 +2610,31 @@
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-content {
     display: flex;
     border-radius: 3px; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-popup {
+    position: relative;
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-popup .sheet-pc-itemcontent {
+    visibility: hidden;
+    width: 25em;
+    background-color: #606060;
+    color: #FFFFFF;
+    text-align: justify;
+    padding: 5px;
+    margin-left: 1em;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-popup .sheet-pc-itemcontent span:empty::after {
+    content: " – ";
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item:hover {
-    background: #f2f2f2; }
+    background: #F0F0F0; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item:hover .sheet-pc-item-popup .sheet-pc-itemcontent {
+    visibility: visible;
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-name {
     flex-grow: 1; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-quantity,
@@ -2985,6 +3008,26 @@
     margin-left: 5px; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-display-brackets {
     opacity: .5; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-button + .sheet-spell-popup {
+    position: relative;
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-button + .sheet-spell-popup .sheet-spell-quickview {
+    visibility: hidden;
+    width: 25em;
+    background-color: #606060;
+    color: #FFFFFF;
+    text-align: justify;
+    padding: 5px;
+    margin-left: 1em;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-button:hover + .sheet-spell-popup .sheet-spell-quickview {
+    visibility: visible;
+  }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-row-gap: 5px;
@@ -3048,7 +3091,7 @@
   grid-row-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
-  grid-auto-flow: column; }
+  grid-auto-flow: row; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spells .sheet-spells-8-9 {
     display: grid;
     grid-row-gap: 10px;
