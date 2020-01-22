@@ -738,7 +738,10 @@
                                     <span name="attr_strength_mod" title="@{strength_mod}">0</span>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_strength_base" title="@{strength}" value="10" /> <input type="hidden" name="attr_strength" value="10" /> <input type="hidden" name="attr_strength_flag" value="0" class="sheet-field-toggle" /> <span name="attr_strength"></span>
+                                    <input type="text" name="attr_strength_base" title="@{strength}" value="10">
+                                    <input type="hidden" name="attr_strength" value="10">
+                                    <input type="hidden" name="attr_strength_flag" value="0" class="sheet-field-toggle">
+                                    <span name="attr_strength"></span>
                                 </div>
                             </div>
                             <div class="sheet-container-attribute">
@@ -749,55 +752,66 @@
                                     <span name="attr_dexterity_mod" title="@{dexterity_mod}">0</span>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_dexterity_base" title="@{dexterity}" value="10" /> <input type="hidden" name="attr_dexterity" value="10" /> <input type="hidden" name="attr_dexterity_flag" value="0" class="sheet-field-toggle" /> <span name="attr_dexterity"></span>
+                                    <input type="text" name="attr_dexterity_base" title="@{dexterity}" value="10">
+                                    <input type="hidden" name="attr_dexterity" value="10">
+                                    <input type="hidden" name="attr_dexterity_flag" value="0" class="sheet-field-toggle">
+                                    <span name="attr_dexterity">
                                 </div>
                             </div>
                             <div class="sheet-container-attribute">
-                                <span name="attr_dexterity"></span>
                                 <div class="sheet-container-header">
-                                    <span name="attr_dexterity"><button type="roll" name="roll_constitution" value="@{wtype}&{template:simple} {{rname=Constitution}} {{mod=@{constitution_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{constitution_mod}@{jack_attr}[CON]]]}} @{rtype}+@{constitution_mod}@{jack_attr}[CON]]]}} @{charname_output}"><span name="attr_dexterity"><span name="attr_dexterity"><span name="attr_dexterity"><span name="attr_dexterity">Constitution</span></span></span></span></button></span>
+                                    <button type="roll" name="roll_constitution" value="@{wtype}&{template:simple} {{rname=Constitution}} {{mod=@{constitution_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{constitution_mod}@{jack_attr}[CON]]]}} @{rtype}+@{constitution_mod}@{jack_attr}[CON]]]}} @{charname_output}">Constitution</button>
                                 </div>
                                 <div class="sheet-container-body">
                                     <span name="attr_constitution_mod" title="@{constitution_mod}">0</span>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_constitution_base" title="@{constitution}" value="10" /> <input type="hidden" name="attr_constitution" value="10" /> <input type="hidden" name="attr_constitution_flag" value="0" class="sheet-field-toggle" /> <span name="attr_constitution"></span>
+                                    <input type="text" name="attr_constitution_base" title="@{constitution}" value="10">
+                                    <input type="hidden" name="attr_constitution" value="10">
+                                    <input type="hidden" name="attr_constitution_flag" value="0" class="sheet-field-toggle">
+                                    <span name="attr_constitution">
                                 </div>
                             </div>
                             <div class="sheet-container-attribute">
-                                <span name="attr_constitution"></span>
                                 <div class="sheet-container-header">
-                                    <span name="attr_constitution"><button type="roll" name="roll_intelligence" value="@{wtype}&{template:simple} {{rname=Intelligence}} {{mod=@{intelligence_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{rtype}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{charname_output}"><span name="attr_constitution"><span name="attr_constitution"><span name="attr_constitution"><span name="attr_constitution">Intelligence</span></span></span></span></button></span>
+                                    <button type="roll" name="roll_intelligence" value="@{wtype}&{template:simple} {{rname=Intelligence}} {{mod=@{intelligence_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{rtype}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{charname_output}">Intelligence</button>
                                 </div>
                                 <div class="sheet-container-body">
                                     <span name="attr_intelligence_mod" title="@{intelligence_mod}">0</span>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_intelligence_base" title="@{intelligence}" value="10" /> <input type="hidden" name="attr_intelligence" value="10" /> <input type="hidden" name="attr_intelligence_flag" value="0" class="sheet-field-toggle" /> <span name="attr_intelligence"></span>
+                                    <input type="text" name="attr_intelligence_base" title="@{intelligence}" value="10">
+                                    <input type="hidden" name="attr_intelligence" value="10">
+                                    <input type="hidden" name="attr_intelligence_flag" value="0" class="sheet-field-toggle">
+                                    <span name="attr_intelligence">
                                 </div>
                             </div>
                             <div class="sheet-container-attribute">
-                                <span name="attr_intelligence"></span>
                                 <div class="sheet-container-header">
-                                    <span name="attr_intelligence"><button type="roll" name="roll_wisdom" value="@{wtype}&{template:simple} {{rname=Wisdom}} {{mod=@{wisdom_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{rtype}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{charname_output}"><span name="attr_intelligence"><span name="attr_intelligence"><span name="attr_intelligence"><span name="attr_intelligence">Wisdom</span></span></span></span></button></span>
+                                    <button type="roll" name="roll_wisdom" value="@{wtype}&{template:simple} {{rname=Wisdom}} {{mod=@{wisdom_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{rtype}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{charname_output}">Wisdom</button>
                                 </div>
                                 <div class="sheet-container-body">
                                     <span name="attr_wisdom_mod" title="@{wisdom_mod}">0</span>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_wisdom_base" title="@{wisdom}" value="10" /> <input type="hidden" name="attr_wisdom" value="10" /> <input type="hidden" name="attr_wisdom_flag" value="0" class="sheet-field-toggle" /> <span name="attr_wisdom"></span>
+                                    <input type="text" name="attr_wisdom_base" title="@{wisdom}" value="10">
+                                    <input type="hidden" name="attr_wisdom" value="10">
+                                    <input type="hidden" name="attr_wisdom_flag" value="0" class="sheet-field-toggle">
+                                    <span name="attr_wisdom">
                                 </div>
                             </div>
                             <div class="sheet-container-attribute">
-                                <span name="attr_wisdom"></span>
                                 <div class="sheet-container-header">
-                                    <span name="attr_wisdom"><button type="roll" name="roll_charisma" value="@{wtype}&{template:simple} {{rname=Charisma}} {{mod=@{charisma_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{rtype}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{charname_output}"><span name="attr_wisdom"><span name="attr_wisdom"><span name="attr_wisdom"><span name="attr_wisdom">Charisma</span></span></span></span></button></span>
+                                    <button type="roll" name="roll_charisma" value="@{wtype}&{template:simple} {{rname=Charisma}} {{mod=@{charisma_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{rtype}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{charname_output}">Charisma</button>
                                 </div>
                                 <div class="sheet-container-body">
                                     <span name="attr_charisma_mod" title="@{charisma_mod}">0</span>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_charisma_base" title="@{charisma}" value="10" /> <input type="hidden" name="attr_charisma" value="10" /> <input type="hidden" name="attr_charisma_flag" value="0" class="sheet-field-toggle" /> <span name="attr_charisma"></span>
+                                    <input type="text" name="attr_charisma_base" title="@{charisma}" value="10">
+                                    <input type="hidden" name="attr_charisma" value="10">
+                                    <input type="hidden" name="attr_charisma_flag" value="0" class="sheet-field-toggle">
+                                    <span name="attr_charisma">
                                 </div>
                             </div>
                         </div>
