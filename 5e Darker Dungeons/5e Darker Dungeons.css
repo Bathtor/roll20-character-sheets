@@ -20,11 +20,11 @@
   .charsheet .sheet-darkerdungeons input:focus,
   .charsheet .sheet-darkerdungeons textarea:hover,
   .charsheet .sheet-darkerdungeons textarea:focus {
-    background: #e5fffb;
+    background: #E5EDFB;
     outline: none; }
   .charsheet .sheet-darkerdungeons select:hover,
   .charsheet .sheet-darkerdungeons select:focus {
-    background: #e5fffb; }
+    background: #E5EDFB; }
     .charsheet .sheet-darkerdungeons select:hover option,
     .charsheet .sheet-darkerdungeons select:focus option {
       background: white; }
@@ -62,7 +62,7 @@
     width: 100%;
     z-index: 1; }
     .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=checkbox]:hover ~ span, .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=checkbox]:focus ~ span {
-      background: #e5fffb; }
+      background: #E5EDFB; }
     .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=checkbox]:checked ~ span {
       background: #A6B0C1; }
       .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=checkbox]:checked ~ span::after {
@@ -136,7 +136,7 @@
       width: 100%;
       border-radius: 100%; }
       .charsheet .sheet-darkerdungeons .sheet-container-attribute .sheet-container-footer input:hover, .charsheet .sheet-darkerdungeons .sheet-container-attribute .sheet-container-footer input:focus {
-        background: #e5fffb; }
+        background: #E5EDFB; }
         .charsheet .sheet-darkerdungeons .sheet-container-attribute .sheet-container-footer input:hover ~ span, .charsheet .sheet-darkerdungeons .sheet-container-attribute .sheet-container-footer input:focus ~ span {
           display: none; }
     .charsheet .sheet-darkerdungeons .sheet-container-attribute .sheet-container-footer span {
@@ -437,7 +437,7 @@
     font-weight: bold;
     padding: 0 5px; }
     .charsheet .sheet-darkerdungeons .repcontrol .btn:hover {
-      background: #e5fffb; }
+      background: #E5EDFB; }
 .charsheet .sheet-darkerdungeons .repitem:not(:first-of-type) {
   border-color: #cccccc; }
 .charsheet .sheet-darkerdungeons .repitem:not(:last-of-type) {
@@ -564,7 +564,7 @@
     cursor: pointer;
     display: flex; }
     .charsheet .sheet-darkerdungeons .sheet-form .sheet-form-checkbox:hover {
-      background: #e5fffb; }
+      background: #E5EDFB; }
     .charsheet .sheet-darkerdungeons .sheet-form .sheet-form-checkbox input {
       height: 16px;
       width: auto; }
@@ -1224,7 +1224,7 @@
     overflow: hidden;
     text-overflow: ellipsis; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-header button:hover {
-    background: #e5fffb; }
+    background: #E5EDFB; }
 .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section {
   border-bottom: 2px solid #6A2A2C;
   border-top: 2px solid #6A2A2C;
@@ -1248,7 +1248,7 @@
     margin: 0;
     padding: 0; }
     .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section .sheet-btn-inline:hover {
-      background: #e5fffb; }
+      background: #E5EDFB; }
 .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section-abilities {
   display: flex;
   justify-content: space-between; }
@@ -1262,7 +1262,7 @@
     padding: 0;
     text-shadow: none; }
     .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section-abilities .sheet-btn-npc-ability:hover {
-      background: #e5fffb; }
+      background: #E5EDFB; }
     .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section-abilities .sheet-btn-npc-ability .sheet-btn-npc-ability-title {
       display: block;
       font-weight: bold; }
@@ -1280,7 +1280,7 @@
   margin: 0;
   padding: 0; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section-skills button:hover {
-    background: #e5fffb; }
+    background: #E5EDFB; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section-skills button > :last-child::before {
     content: "+"; }
 .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-section-saving-throws .sheet-field-toggle[value="1"] + button > :last-child::after,
@@ -1294,7 +1294,7 @@
   position: absolute;
   right: 0; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-btn-npc-initiative:hover {
-    background: #e5fffb; }
+    background: #E5EDFB; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-btn-npc-initiative > :first-child {
     display: block;
     font-family: "dicefontd20";
@@ -1369,7 +1369,7 @@
 .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-action {
   font-size: 11px; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-action button:hover {
-    background: #e5fffb; }
+    background: #E5EDFB; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-action .sheet-fieldset-item-npcaction-checked-name {
     background: #dddddd;
     display: inline-block;
@@ -1382,7 +1382,7 @@
 .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-legendary-action {
   font-size: 11px; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-legendary-action button:hover {
-    background: #e5fffb; }
+    background: #E5EDFB; }
   .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-npc-legendary-action .sheet-fieldset-item-npcaction-checked-name {
     background: #dddddd;
     display: inline-block;
@@ -1488,7 +1488,7 @@
       color: inherit; }
       .charsheet .sheet-darkerdungeons .sheet-section-npc .sheet-section-npc-footer p a:hover {
         text-decoration: none;
-        background: #e5fffb; }
+        background: #E5EDFB; }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc {
   margin: 0 auto;
@@ -1503,7 +1503,7 @@
     color: inherit; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-footer p a:hover {
       text-decoration: none;
-      background: #e5fffb; }
+      background: #E5EDFB; }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header {
   display: flex;
@@ -1610,14 +1610,13 @@
       width: 16.66667%;
       z-index: 1; }
       .sheet-tabs .sheet-tab > input[type="radio"]:hover ~ .sheet-tab-label {
-        background: #e5fffb;
-        border-bottom-color: #dbfff9; }
+        background: #CFDDF5;
+      }
     .sheet-tabs .sheet-tab > .sheet-tab-label {
       align-items: center;
-      background: #dddddd;
-      border-radius: 6px 6px 0 0;
-      border: 2px solid #dddddd;
-      color: #8a8a8a;
+      background: #A6B0C1;
+      border-radius: 6px;
+      color: #3a3a3a;
       display: flex;
       font-size: 11px;
       font-variant: small-caps;
@@ -1629,15 +1628,12 @@
       text-transform: uppercase;
       top: 0;
       width: 16.66667%;
-      border-left-color: white;
-      border-top-color: white;
-      border-right-color: white;
-      border-bottom-color: lightgrey; }
+      order: solid 2px white;
+    }
     .sheet-tabs .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
-      background: white;
-      border-color: #575757;
-      border-bottom-color: white;
-      color: black; }
+      background: #2D4671;
+      color: white; 
+    }
     .sheet-tabs .sheet-tab > input[type="radio"]:checked {
       cursor: auto; }
     .sheet-tabs .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-content {
@@ -1723,7 +1719,7 @@
       }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw button:hover,
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button:hover {
-        background: #e5fffb;
+        background: #E5EDFB;
         margin-left: -3px;
         padding-left: 3px;
         color: #b61037; }
@@ -1749,7 +1745,7 @@
       text-overflow: ellipsis;
       overflow: hidden; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button:hover {
-        background: #e5fffb; }
+        background: #E5EDFB; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(1) {
         border: 1px solid black;
         border-radius: 100%;
@@ -1814,7 +1810,7 @@
         line-height: 13px;
         padding: 2px 0; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies .sheet-pc-proficiency button:hover {
-        background: #e5fffb; }
+        background: #E5EDFB; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-effects {
   grid-area: effects;
   display: flex;
@@ -2143,7 +2139,7 @@
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-stress .sheet-pc-stress-levels ul span strong {
           margin-right: 2px; }
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-stress .sheet-pc-stress-levels ul span:hover {
-          background: #e5fffb; }
+          background: #E5EDFB; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-stress .sheet-pc-stress-levels li:nth-of-type(1) input[type=checkbox]:checked + span {
       background: #cfb401;
       color: white; }
@@ -2257,7 +2253,7 @@
       padding: 0;
       width: 100%; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-attacks .sheet-pc-attack button:hover {
-        background: #e5fffb; }
+        background: #E5EDFB; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-attacks .sheet-pc-attack button span {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -2792,7 +2788,7 @@
       width: 100%;
       text-shadow: none; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature button:hover {
-        background: #e5fffb; }
+        background: #E5EDFB; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-name {
       background: #6A2A2C;
       color: white;
@@ -2875,7 +2871,7 @@
     width: 100%;
     overflow: hidden; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell button:hover {
-      background: #e5fffb;
+      background: #E5EDFB;
       margin-left: -3px;
       margin-right: -3px;
       padding-left: 3px;
