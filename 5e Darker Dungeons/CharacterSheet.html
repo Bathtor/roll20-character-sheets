@@ -1,0 +1,143 @@
+<div class="sheet-darkerdungeons">
+    <input class="monster_confirm_flag" type="hidden" name="attr_monster_confirm_flag" />
+    <div class="licensecontainer compendium-drop-target monsters">
+        <input class="sheet-toggle-npc" name="attr_npc" type="hidden" value="0" />
+        <input class="sheet-toggle-npc-spells" name="attr_npcspellcastingflag" type="checkbox" value="1" hidden="" />
+        <input class="sheet-toggle-npc-edit" name="attr_npc_options-flag" type="checkbox" hidden="" />
+        <div class="sheet-section-roll">
+            <input type="hidden" name="attr_rtype" class="sheet-roll-toggle" />
+            <div class="sheet-section-roll-advantage">
+                <label class="sheet-radio">
+                    <input type="radio" name="attr_advantagetoggle" value="{{query=1}} {{advantage=1}} {{r2=[[@{d20}" /> <span title="@{advantagetoggle}">Advantage</span>
+                  </label>
+                  <label class="sheet-radio">
+                    <input type="radio" name="attr_advantagetoggle" value="{{query=1}} {{normal=1}} {{r2=[[0d20" checked="checked" /> <span title="@{advantagetoggle}">Normal</span>
+                  </label>
+                  <label class="sheet-radio">
+                    <input type="radio" name="attr_advantagetoggle" value="{{query=1}} {{disadvantage=1}} {{r2=[[@{d20}" /> <span title="@{advantagetoggle}">Disadvantage</span>
+                  </label>
+              </div>
+              <input type="hidden" name="attr_wtype" class="sheet-roll-toggle" />
+              <div class="sheet-section-roll-whisper">
+                <label class="sheet-radio"><input type="radio" name="attr_whispertoggle" value="" checked="checked" /> <span title="@{whispertoggle}">Public</span></label> <label class="sheet-radio"><input type="radio" name="attr_whispertoggle" value="/w gm " /> <span title="@{whispertoggle}">To GM</span></label>
+              </div>
+        </div>
+        <!-- ###INSERT NPC SHEET### //-->
+
+        <!-- ###INSERT PC SHEET### //-->
+
+        <div class="sheet-section-fields">
+          <input type="hidden" name="attr_d20" value="1d20" />
+          <input type="hidden" name="attr_level" value="1" />
+          <input type="hidden" name="attr_pb" value="2" />
+          <input type="hidden" name="attr_pbd_safe" value="" />
+          <input type="hidden" name="attr_jack" value="1" />
+          <input type="hidden" name="attr_jack_attr" value="" />
+          <input type="hidden" name="attr_jack_bonus" value="" />
+          <input type="hidden" name="attr_passive_wisdom" value="10" />
+          <input type="hidden" name="attr_hitdie_final" value="" />
+          <input type="hidden" name="attr_globalsavingthrowbonus" value="" />
+          <input type="hidden" name="attr_death_save_bonus" value="0" />
+          <input type="hidden" name="attr_initiative_bonus" value="0" />
+          <input type="hidden" name="attr_spell_save_dc" value="0" />
+          <input type="hidden" name="attr_spell_attack_bonus" value="0" />
+          <input type="hidden" name="attr_spell_attack_mod" value="0" />
+          <input type="hidden" name="attr_npc_legendary_actions_desc" value="" />
+          <input type="hidden" name="attr_global_damage_mod_crit" value="0" />
+          <input type="hidden" name="attr_global_damage_mod_roll" value="0" />
+          <input type="hidden" name="attr_global_damage_mod_type" value="" />
+          <input type="hidden" name="attr_global_attack_mod" value="" />
+          <input type="hidden" name="attr_global_save_mod" value="" />
+          <input type="hidden" name="attr_global_skill_mod" value="" />
+          <input type="hidden" name="attr_exhaustion_1" value="" />
+          <input type="hidden" name="attr_exhaustion_2" value="" />
+          <input type="hidden" name="attr_exhaustion_3" value="" />
+          <input type="hidden" name="attr_exhaustion_4" value="" />
+          <input type="hidden" name="attr_exhaustion_5" value="" />
+          <input type="hidden" name="attr_exhaustion_6" value="" />
+          <input type="hidden" name="attr_exhaustion_base" value="0" />
+          <input type="hidden" name="attr_exhaustion_wounds" value="0" />
+          <input type="hidden" name="attr_exhaustion_conditions" value="0" />
+          <input type="hidden" name="attr_exhaustion_total" value="0" />
+          <input type="hidden" name="attr_exhaustion_status" value="0" />
+          <input type="hidden" name="attr_stress" value="0" />
+          <input type="hidden" name="attr_strength_mod" value="0" />
+          <input type="hidden" name="attr_dexterity_mod" value="0" />
+          <input type="hidden" name="attr_constitution_mod" value="0" />
+          <input type="hidden" name="attr_intelligence_mod" value="0" />
+          <input type="hidden" name="attr_wisdom_mod" value="0" />
+          <input type="hidden" name="attr_charisma_mod" value="0" />
+          <input type="hidden" name="attr_strength_save_bonus" value="0" />
+          <input type="hidden" name="attr_dexterity_save_bonus" value="0" />
+          <input type="hidden" name="attr_constitution_save_bonus" value="0" />
+          <input type="hidden" name="attr_intelligence_save_bonus" value="0" />
+          <input type="hidden" name="attr_wisdom_save_bonus" value="0" />
+          <input type="hidden" name="attr_charisma_save_bonus" value="0" />
+          <input type="hidden" name="attr_strength_maximum" value="20" />
+          <input type="hidden" name="attr_dexterity_maximum" value="20" />
+          <input type="hidden" name="attr_constitution_maximum" value="20" />
+          <input type="hidden" name="attr_intelligence_maximum" value="20" />
+          <input type="hidden" name="attr_wisdom_maximum" value="20" />
+          <input type="hidden" name="attr_charisma_maximum" value="20" />
+          <input type='hidden' name='attr_acrobatics_bonus' value='0' />
+          <input type='hidden' name='attr_animal_handling_bonus' value='0' />
+          <input type='hidden' name='attr_arcana_bonus' value='0' />
+          <input type='hidden' name='attr_athletics_bonus' value='0' />
+          <input type='hidden' name='attr_deception_bonus' value='0' />
+          <input type='hidden' name='attr_history_bonus' value='0' />
+          <input type='hidden' name='attr_insight_bonus' value='0' />
+          <input type='hidden' name='attr_intimidation_bonus' value='0' />
+          <input type='hidden' name='attr_investigation_bonus' value='0' />
+          <input type='hidden' name='attr_medicine_bonus' value='0' />
+          <input type='hidden' name='attr_nature_bonus' value='0' />
+          <input type='hidden' name='attr_perception_bonus' value='0' />
+          <input type='hidden' name='attr_performance_bonus' value='0' />
+          <input type='hidden' name='attr_persuasion_bonus' value='0' />
+          <input type='hidden' name='attr_religion_bonus' value='0' />
+          <input type='hidden' name='attr_sleight_of_hand_bonus' value='0' />
+          <input type='hidden' name='attr_stealth_bonus' value='0' />
+          <input type='hidden' name='attr_survival_bonus' value='0' />
+          <input type='hidden' name='attr_lvl1_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl2_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl3_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl4_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl5_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl6_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl7_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl8_slots_total' value='0' />
+          <input type='hidden' name='attr_lvl9_slots_total' value='0' />
+          <input type='hidden' name='attr_show_death_failures_flag' value='1' />
+          <input type='hidden' name='attr_show_exhaustion_flag' value='1' />
+          <input type='hidden' name='attr_show_stress_flag' value='1' />
+          <input type='hidden' name='attr_show_survival_conditions' value='1' />
+          <input type='hidden' name='attr_use_inventory_slots' value='1' />
+          <input type='hidden' name='attr_use_intelligent_initiative' value='1' />
+          <!-- COMPENDIUM DROP CATCHERS -->
+          <input type="hidden" name="attr_drop_category" accept="Category" />
+          <input type="hidden" name="attr_drop_name" accept="Name" />
+          <input type="hidden" name="attr_drop_data" accept="data" />
+          <input type="hidden" name="attr_drop_content" accept="Content" />
+        </div>
+    </div>
+</div>
+
+<div class="sheet-section-templates">
+    <div class="sheet-rolltemplates">
+        <!-- ###INSERT ROLLTEMPLATES### //-->
+    </div>
+</div>
+<!-- ###INSERT SCRIPT### //-->
+<div class="sheet-compendium-warning">
+    <span>Importing compendium data</span>
+</div>
+<div class="sheet-monster-confirm">
+    <span>Are you sure you want to turn this character into a</span> <span name="attr_drop_name"></span><span>?</span>
+    <div class="sheet-monster-confirm-buttons">
+        <div class="sheet-monster-confirm-button">
+            <input class="sheet-monster-confirm-cancel" type="checkbox" name="attr_cancel" /><span class="cancel">Cancel</span>
+        </div>
+        <div class="sheet-monster-confirm-button">
+            <input class="sheet-monster-confirm-yes" type="checkbox" name="attr_confirm" /><span class="yes">Yes</span>
+        </div>
+    </div>
+</div>
