@@ -36,4 +36,4 @@ val inserted = htmlData
 		""");
 write(targetFile, inserted);
 println(s"Output written to $targetFile");
-%%("/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl", targetFile)
+//%%("/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl", targetFile)
