@@ -203,7 +203,7 @@
     align-self: stretch;
     display: flex;
     flex-grow: 1;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
     justify-content: center;
     position: relative;
@@ -242,11 +242,12 @@
   padding: 0px;
   overflow: hidden;
   border: solid 2px #A6B0C1;
+  background-color: #FFFFFF;
 }
   .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-header {
     background: none;
     font-family: 'Belleza', sans-serif;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
     line-height: 1;
     margin-left: 2px;
@@ -259,6 +260,7 @@
     align-items: flex-end;
     justify-content: center; }
     .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-header button {
+      background: none; /* reset roll20 global settings */
       border: 0;
       font-size: inherit;
       font-weight: inherit;
@@ -308,12 +310,21 @@
       align-items: center;
       justify-content: center;
       flex-grow: 1; }
+
+    .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-body span.sheet-modifier-display::before {
+      content: '+'
+    }
+
+    .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-body input[value^="-"]+span.sheet-modifier-display::before {
+      content: ''
+    }
+
     .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-body select {
       cursor: pointer;
       height: 100%; }
   .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-footer {
     color: #bab8b8;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: bold;
     line-height: 10px;
     padding-top: 6px;
@@ -360,7 +371,7 @@
     align-items: center;
     display: flex;
     flex-grow: 1;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: bold;
     justify-content: center;
     text-transform: uppercase; }
@@ -394,15 +405,16 @@
     font-weight: bold;
     height: 2.5rem;
   }
-  /*.charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-container-body {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-bottom: 2px;
-    overflow: hidden;
-    padding: 5px 10px; 
-  }*/
+  
+.charsheet .sheet-darkerdungeons .sheet-npc-body .sheet-container-panel .sheet-container-body {
+    background-color: #FFFFFF;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    padding: 5px;
+    z-index: 0;
+  }
+
   .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-container-body {
     background-color: #FFFFFF;
     margin-left: 2px;
@@ -415,7 +427,7 @@
       text-transform: uppercase;
       display: flex;
       color: #bab8b8;
-      font-size: 8px;
+      font-size: 10px;
       font-weight: bold;
       line-height: 10px;
       margin-bottom: 2px;
@@ -1668,7 +1680,7 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "primary-attributes primary-attributes primary-attributes" "attributes trackers trackers" "attributes health health" "attributes attacks effects";
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 25rem 1fr 1fr;
   grid-template-rows: 9rem 9rem auto 1fr; 
 }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-primary-attributes {
@@ -1718,7 +1730,16 @@
       width: 20px;
       text-align: center;
       font-weight: bold;
-      font-size: 11px; }
+      font-size: 11px; 
+    }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw span.sheet-modifier-display::before,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill span.sheet-modifier-display::before {
+      content: '+'
+    }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw input[value^="-"]+span.sheet-modifier-display::before,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill input[value^="-"]+span.sheet-modifier-display::before {
+      content: ''
+    }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw button,
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button {
       flex-grow: 1;
@@ -1954,7 +1975,9 @@
   grid-row-gap: 5px;
   grid-template-areas: "armor initiative perception speed fate fate" "armor initiative perception speed inspiration inspiration"; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-armor {
-    grid-area: armor; }
+    border-color: #75B975;
+    grid-area: armor; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-initiative {
     grid-area: initiative; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-perception {
@@ -1980,13 +2003,18 @@
   grid-row-gap: 5px;
   grid-template-areas: "hp-max hp hp health wounds wounds" "hit-dice hit-dice death health wounds wounds";
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 65px auto; }
+  grid-template-rows: 7rem auto; 
+}
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-max {
-    grid-area: hp-max; }
+    border-color: #E79292;
+    grid-area: hp-max; 
+  }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-max .sheet-container-body {
       padding-top: 0; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-current {
-    grid-area: hp; }
+    border-color: #E79292;
+    grid-area: hp; 
+  }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-current .sheet-container-body {
       display: flex;
       flex-direction: row;
@@ -2021,8 +2049,10 @@
         text-align: center;
         width: 100%; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-death {
+    border-color: #801515;
     grid-area: death;
-    max-height: 65px; }
+    max-height: 65px; 
+  }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-death .sheet-container-body {
       align-items: center;
       display: flex;
@@ -2428,7 +2458,7 @@
     border: 0;
     padding-left: 0;
     padding-right: 0;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold; 
     background-color: #A6B0C1;
     border-bottom: white 1px dashed;
