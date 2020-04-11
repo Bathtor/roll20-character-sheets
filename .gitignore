@@ -235,3 +235,8 @@ Call_of_Cthulhu_Spanish/Delta Green Variant
 /base.css
 /app.css
 /.vs/config/applicationhost.config
+
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace

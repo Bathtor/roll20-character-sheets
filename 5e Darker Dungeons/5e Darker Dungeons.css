@@ -2571,16 +2571,15 @@
     padding: 5px;
     margin-left: 1em;
     border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
   }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-popup .sheet-pc-itemcontent span:empty::after {
-    content: " – ";
+    content: ' – ';
   }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item:hover {
-    background: #F0F0F0; }
+    background: #F0F0F0; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item:hover .sheet-pc-item-popup .sheet-pc-itemcontent {
     visibility: visible;
   }
@@ -2695,8 +2694,8 @@
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
-  grid-template-columns: auto 262.5px;
-  grid-template-rows: 355px auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 36rem auto;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "details features" "memories features"; }
@@ -2972,16 +2971,56 @@
     color: #FFFFFF;
     text-align: justify;
     padding: 5px;
+    padding-right: 10px;
     margin-left: 1em;
     border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
+    left: -30rem;
+    top: 1.5rem;
+    width: 30rem;
+    height: 20rem;
+    overflow: scroll;
   }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-button:hover + .sheet-spell-popup .sheet-spell-quickview {
     visibility: visible;
   }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-button + .sheet-spell-popup:hover .sheet-spell-quickview {
+    visibility: visible;
+  }
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview label {
+  display: inline;
+  color: #FFD78F;
+  font-weight: bold;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview label::after {
+  content: ': ';
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview span:empty::after {
+    content: ' – ';
+}
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-style: dotted;
+}
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview p {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview .sheet-spell-schoollevel {
+  text-transform: uppercase;
+  font-family: 'Belleza', sans-serif;
+  color: #50BFB0;
+  font-weight: bold;
+}
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-row-gap: 5px;
