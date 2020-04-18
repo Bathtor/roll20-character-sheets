@@ -314,17 +314,17 @@
                                 </div>
                                 <div class="sheet-pc-skill">
                                     <div class="sheet-checkbox-image">
-                                        <input type="checkbox" name="attr_deception_prof" title="@{deception_prof}" value="(@{pb}*@{deception_type})" /> <span></span>
-                                    </div>
-                                    <input type="hidden" name="attr_deception_bonus" />
-                                    <span class="sheet-modifier-display" name='attr_deception_bonus' title='@{deception_bonus}'>0</span> <button type='roll' name='roll_deception' value='@{wtype}&{template:simple} {{rname=Deception}} {{mod=@{deception_bonus}}} {{r1=[[@{d20}+@{deception_bonus}@{pbd_safe}]]}} @{rtype}+@{deception_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Deception <span>(Cha)</span></button>
-                                </div>
-                                <div class="sheet-pc-skill">
-                                    <div class="sheet-checkbox-image">
                                         <input type="checkbox" name="attr_history_prof" title="@{history_prof}" value="(@{pb}*@{history_type})" /> <span></span>
                                     </div>
                                     <input type="hidden" name="attr_history_bonus" />
                                     <span class="sheet-modifier-display" name='attr_history_bonus' title='@{history_bonus}'>0</span> <button type='roll' name='roll_history' value='@{wtype}&{template:simple} {{rname=History}} {{mod=@{history_bonus}}} {{r1=[[@{d20}+@{history_bonus}@{pbd_safe}]]}} @{rtype}+@{history_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>History <span>(Int)</span></button>
+                                </div>
+                                <div class="sheet-pc-skill">
+                                    <div class="sheet-checkbox-image">
+                                        <input type="checkbox" name="attr_influence_prof" title="@{influence_prof}" value="(@{pb}*@{influence_type})" /> <span></span>
+                                    </div>
+                                    <input type="hidden" name="attr_influence_bonus" />
+                                    <span class="sheet-modifier-display" name='attr_influence_bonus' title='@{influence_bonus}'>0</span> <button type='roll' name='roll_influence' value='@{wtype}&{template:simple} {{rname=Influence}} {{mod=@{influence_bonus}}} {{r1=[[@{d20}+@{influence_bonus}@{pbd_safe}]]}} @{rtype}+@{influence_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Influence <span>(Cha)</span></button>
                                 </div>
                                 <div class="sheet-pc-skill">
                                     <div class="sheet-checkbox-image">
@@ -377,13 +377,6 @@
                                 </div>
                                 <div class="sheet-pc-skill">
                                     <div class="sheet-checkbox-image">
-                                        <input type="checkbox" name="attr_persuasion_prof" title="@{persuasion_prof}" value="(@{pb}*@{persuasion_type})" /> <span></span>
-                                    </div>
-                                    <input type="hidden" name="attr_persuasion_bonus" />
-                                    <span class="sheet-modifier-display" name='attr_persuasion_bonus' title='@{persuasion_bonus}'>0</span> <button type='roll' name='roll_persuasion' value='@{wtype}&{template:simple} {{rname=Persuasion}} {{mod=@{persuasion_bonus}}} {{r1=[[@{d20}+@{persuasion_bonus}@{pbd_safe}]]}} @{rtype}+@{persuasion_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Persuasion <span>(Cha)</span></button>
-                                </div>
-                                <div class="sheet-pc-skill">
-                                    <div class="sheet-checkbox-image">
                                         <input type="checkbox" name="attr_religion_prof" title="@{religion_prof}" value="(@{pb}*@{religion_type})" /> <span></span>
                                     </div>
                                     <input type="hidden" name="attr_religion_bonus" />
@@ -409,6 +402,13 @@
                                     </div>
                                     <input type="hidden" name="attr_survival_bonus" />
                                     <span class="sheet-modifier-display" name='attr_survival_bonus' title='@{survival_bonus}'>0</span> <button type='roll' name='roll_survival' value='@{wtype}&{template:simple} {{rname=Survival}} {{mod=@{survival_bonus}}} {{r1=[[@{d20}+@{survival_bonus}@{pbd_safe}]]}} @{rtype}+@{survival_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Survival <span>(Wis)</span></button>
+                                </div>
+                                <div class="sheet-pc-skill">
+                                    <div class="sheet-checkbox-image">
+                                        <input type="checkbox" name="attr_wile_prof" title="@{wile_prof}" value="(@{pb}*@{wile_type})" /> <span></span>
+                                    </div>
+                                    <input type="hidden" name="attr_wile_bonus" />
+                                    <span class="sheet-modifier-display" name='attr_wile_bonus' title='@{wile_bonus}'>0</span> <button type='roll' name='roll_wile' value='@{wtype}&{template:simple} {{rname=Wile}} {{mod=@{wile_bonus}}} {{r1=[[@{d20}+@{wile_bonus}@{pbd_safe}]]}} @{rtype}+@{wile_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Wile <span>(Int)</span></button>
                                 </div>
                             </div>
                         </div>
@@ -700,12 +700,12 @@
                             </div>
                             <div class="sheet-container-box sheet-pc-death">
                                 <div class="sheet-container-header">
-                                    <input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-toggle" /> <button type="roll" name="roll_death_save" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_save_bonus}}} {{r1=[[@{d20}+@{death_save_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_save_mod}}} @{charname_output}">Death Save Failures</button> <input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle" /> <button type="roll" name="roll_death_save" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_save_bonus}}} {{r1=[[@{d20}+@{death_save_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_save_mod}}} @{charname_output}">Death Saves</button>
+                                    <input type="hidden" name="attr_show_death_failures_flag" class="sheet-field-toggle" /> <button type="roll" name="roll_death_save" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_save_bonus}}} {{r1=[[@{d20}+@{death_save_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_save_mod}}} @{charname_output}">Death Save Failures</button> <input type="hidden" name="attr_show_death_failures_flag" class="sheet-field-untoggle" /> <button type="roll" name="roll_death_save" value="@{wtype}&{template:simple} {{rname=Death Save}} {{mod=@{death_save_bonus}}} {{r1=[[@{d20}+@{death_save_bonus}[MOD]@{globalsavingthrowbonus}]]}} {{normal=1}} {{global=@{global_save_mod}}} @{charname_output}">Death Saves</button>
                                 </div>
                                 <div class="sheet-container-body">
-                                    <input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle" />
+                                    <input type="hidden" name="attr_show_death_failures_flag" class="sheet-field-untoggle" />
                                     <div class="sheet-death-save-success">
-                                        <input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle" /> <span>S:</span>
+                                        <input type="hidden" name="attr_show_death_failures_flag" class="sheet-field-untoggle" /> <span>S:</span>
                                         <div class="sheet-checkbox-image">
                                             <input type="checkbox" name="attr_deathsave_success1" title="@{deathsave_success1}" /> <span></span>
                                         </div>
@@ -717,7 +717,7 @@
                                         </div>
                                     </div>
                                     <div class="sheet-death-save-fail">
-                                        <input type="hidden" name="attr_show_death_failures_flag" value="1" class="sheet-field-untoggle" /> <span>F:</span>
+                                        <input type="hidden" name="attr_show_death_failures_flag" class="sheet-field-untoggle" /> <span>F:</span>
                                         <div class="sheet-checkbox-image">
                                             <input type="checkbox" name="attr_deathsave_fail1" title="@{deathsave_fail1}" /> <span></span>
                                         </div>
@@ -1319,7 +1319,7 @@
                         </div>
                     </div>
                     <div class="sheet-container-effects">
-                        <input type="hidden" name="attr_show_stress_flag" value="1" class="sheet-field-toggle" />
+                        <input type="hidden" name="attr_show_stress_flag" class="sheet-field-toggle" />
                         <div class="sheet-container-well sheet-container-well-stress">
                             <div class="sheet-container-box sheet-pc-stress">
                                 <div class="sheet-container-header">
@@ -2776,15 +2776,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -3028,7 +3028,7 @@
                                                 <div class="sheet-checkbox-image">
                                                     <input type="checkbox" name="attr_spellprepared" value="1" /> <span></span>
                                                 </div>
-                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" /> 
+                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" />
                                                 <button type="roll" name="roll_spell" value="@{rollcontent}" class="sheet-pc-spell-button"><span class="sheet-pc-spell-name"><span name="attr_spellname"></span> <input type="hidden" name="attr_innate" value="" class="sheet-field-toggle" /> <span name="attr_innate" class="sheet-display-brackets"></span></span> <span class="sheet-pc-spell-components"><input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>R</span> <input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>C</span> <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>V</span> <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>S</span> <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>M</span></span></button>
                                                 <div class="sheet-spell-popup">
                                                     <div class="sheet-spell-quickview">
@@ -3036,15 +3036,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -3288,7 +3288,7 @@
                                                 <div class="sheet-checkbox-image">
                                                     <input type="checkbox" name="attr_spellprepared" value="1" /> <span></span>
                                                 </div>
-                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" /> 
+                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" />
                                                 <button type="roll" name="roll_spell" value="@{rollcontent}" class="sheet-pc-spell-button"><span class="sheet-pc-spell-name"><span name="attr_spellname"></span> <input type="hidden" name="attr_innate" value="" class="sheet-field-toggle" /> <span name="attr_innate" class="sheet-display-brackets"></span></span> <span class="sheet-pc-spell-components"><input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>R</span> <input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>C</span> <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>V</span> <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>S</span> <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>M</span></span></button>
                                                 <div class="sheet-spell-popup">
                                                     <div class="sheet-spell-quickview">
@@ -3296,15 +3296,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -3548,7 +3548,7 @@
                                                 <div class="sheet-checkbox-image">
                                                     <input type="checkbox" name="attr_spellprepared" value="1" /> <span></span>
                                                 </div>
-                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" /> 
+                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" />
                                                 <button type="roll" name="roll_spell" value="@{rollcontent}" class="sheet-pc-spell-button"><span class="sheet-pc-spell-name"><span name="attr_spellname"></span> <input type="hidden" name="attr_innate" value="" class="sheet-field-toggle" /> <span name="attr_innate" class="sheet-display-brackets"></span></span> <span class="sheet-pc-spell-components"><input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>R</span> <input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>C</span> <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>V</span> <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>S</span> <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>M</span></span></button>
                                                 <div class="sheet-spell-popup">
                                                     <div class="sheet-spell-quickview">
@@ -3556,15 +3556,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -3816,15 +3816,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -4076,15 +4076,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -4328,7 +4328,7 @@
                                                 <div class="sheet-checkbox-image">
                                                     <input type="checkbox" name="attr_spellprepared" value="1" /> <span></span>
                                                 </div>
-                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" /> 
+                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" />
                                                 <button type="roll" name="roll_spell" value="@{rollcontent}" class="sheet-pc-spell-button"><span class="sheet-pc-spell-name"><span name="attr_spellname"></span> <input type="hidden" name="attr_innate" value="" class="sheet-field-toggle" /> <span name="attr_innate" class="sheet-display-brackets"></span></span> <span class="sheet-pc-spell-components"><input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>R</span> <input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>C</span> <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>V</span> <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>S</span> <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>M</span></span></button>
                                                 <div class="sheet-spell-popup">
                                                     <div class="sheet-spell-quickview">
@@ -4336,15 +4336,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -4596,15 +4596,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -4856,15 +4856,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -5108,7 +5108,7 @@
                                                 <div class="sheet-checkbox-image">
                                                     <input type="checkbox" name="attr_spellprepared" value="1" /> <span></span>
                                                 </div>
-                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" /> 
+                                                <input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:spell} {{level=@{spellschool} @{spelllevel}}} {{name=@{spellname}}} {{castingtime=@{spellcastingtime}}} {{range=@{spellrange}}} {{target=@{spelltarget}}} @{spellcomp_v} @{spellcomp_s} @{spellcomp_m} {{material=@{spellcomp_materials}}} {{duration=@{spellduration}}} {{description=@{spelldescription}}} {{athigherlevels=@{spellathigherlevels}}} @{spellritual} {{innate=@{innate}}} @{spellconcentration} @{charname_output}" />
                                                 <button type="roll" name="roll_spell" value="@{rollcontent}" class="sheet-pc-spell-button"><span class="sheet-pc-spell-name"><span name="attr_spellname"></span> <input type="hidden" name="attr_innate" value="" class="sheet-field-toggle" /> <span name="attr_innate" class="sheet-display-brackets"></span></span> <span class="sheet-pc-spell-components"><input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>R</span> <input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>C</span> <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>V</span> <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>S</span> <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>M</span></span></button>
                                                 <div class="sheet-spell-popup">
                                                     <div class="sheet-spell-quickview">
@@ -5116,15 +5116,15 @@
                                                             <span name="attr_spellschool"></span>&nbsp;<span name="attr_spelllevel"></span>
                                                         </p>
                                                         <p class="sheet-spell-timerange">
-                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash; 
-                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash; 
+                                                            <label>Casting Time</label><span name="attr_spellcastingtime"></span> <input type="hidden" name="attr_spellritual" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Ritual)</span> &mdash;
+                                                            <label>Range</label><span name="attr_spellrange"></span> &mdash;
                                                             <label>Target</label><span name="attr_spelltarget"></span>
                                                         </p>
                                                         <p class="sheet-spell-components">
                                                             <label>Components</label>
                                                             <input type="hidden" name="attr_spellcomp_v" value="{{v=1}}" class="sheet-field-toggle" /> <span>Verbal</span>
                                                             <input type="hidden" name="attr_spellcomp_s" value="{{s=1}}" class="sheet-field-toggle" /> <span>&nbsp;Somatic</span>
-                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span> 
+                                                            <input type="hidden" name="attr_spellcomp_m" value="{{m=1}}" class="sheet-field-toggle" /> <span>&nbsp;Materal&nbsp;(<span name="attr_spellcomp_materials"></span>)</span>
                                                         </p>
                                                         <p class="sheet-spell-duration">
                                                             <label>Duration</label><span name="attr_spellduration"><input type="hidden" name="attr_spellconcentration" value="0" class="sheet-field-toggle" /> <span>&nbsp;(Concentration)</span>
@@ -5532,7 +5532,7 @@
                             <option value="pick">
                               Don't Auto Roll Damage
                             </option>
-                            <option value="full">
+                            <option value="full" selected="selected">
                               Auto Roll Damage &amp; Crit
                             </option>
                           </select>
@@ -5551,7 +5551,9 @@
                             <option value="custom">
                               Custom
                             </option>
-                          </select> <input type="hidden" name="attr_pb_type" /> <input type="text" name="attr_pb_custom" placeholder="2d10" title="@{pb_custom}" />
+                          </select> 
+                          <input type="hidden" name="attr_pb_type" /> 
+                          <input type="text" name="attr_pb_custom" placeholder="2d10" title="@{pb_custom}" />
                         </div>
                         <div class="sheet-form-group">
                           <label class="sheet-form-checkbox" title="@{global_save_mod_flag}"><input type="checkbox" name="attr_global_save_mod_flag" value="1" /> <span>Show Global Save Modifier Field</span></label>
@@ -5569,17 +5571,19 @@
                           <label class="sheet-form-checkbox" title="@{attr_global_ac_mod_flag}"><input type="checkbox" name="attr_global_ac_mod_flag" value="1" /> <span>Show Global AC Modifier Field</span></label>
                         </div>
                         <div class="sheet-form-group">
-                          <label>Add Character Name to Templates:</label> <select name="attr_charname_output" title="@{charname_output}">
-                            <option value="{{charname=@{character_name}}}">
+                          <label>Add Character Name to Templates:</label> 
+                          <select name="attr_charname_output" title="@{charname_output}">
+                            <option value="{{charname=@{character_name}}}" selected="selected">
                                                     On
                                                 </option>
-                                                <option value="charname=@{character_name}" selected="selected">
+                                                <option value="charname=@{character_name}">
                                                     Off
                                                 </option>
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level Calculations:</label> <select name="attr_level_calculations" title="@{level_calculations}">
+                                            <label>Level Calculations:</label>
+                                            <select name="attr_level_calculations" title="@{level_calculations}">
                                                 <option value="on" selected="selected">
                                                     On
                                                 </option>
@@ -5589,7 +5593,8 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Encumberance:</label> <select name="attr_encumberance_setting" title="@{encumberance_setting}">
+                                            <label>Encumberance:</label>
+                                            <select name="attr_encumberance_setting" title="@{encumberance_setting}">
                                                 <option value="off">
                                                     Simple
                                                 </option>
@@ -5602,7 +5607,8 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Inventory:</label> <select name="attr_simpleinventory" title="@{simpleinventory}">
+                                            <label>Inventory:</label>
+                                            <select name="attr_simpleinventory" title="@{simpleinventory}">
                                                 <option value="complex">
                                                     Compendium Compatible
                                                 </option>
@@ -5612,7 +5618,8 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Features and Traits:</label> <select name="attr_simpletraits" title="@{simpletraits}">
+                                            <label>Features and Traits:</label>
+                                            <select name="attr_simpletraits" title="@{simpletraits}">
                                                 <option value="complex">
                                                     Compendium Compatible
                                                 </option>
@@ -5622,7 +5629,8 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Proficiencies and Languages:</label> <select name="attr_simpleproficencies" title="@{simpleproficencies}">
+                                            <label>Proficiencies and Languages:</label>
+                                            <select name="attr_simpleproficencies" title="@{simpleproficencies}">
                                                 <option value="complex">
                                                     Compendium Compatible
                                                 </option>
@@ -5643,13 +5651,13 @@
                                 <div class="sheet-form sheet-form-borderless">
                                     <div class="sheet-form-body">
                                         <div class="sheet-form-group">
-                                            <label class="sheet-form-checkbox" title="@{show_death_failures_flag}"><input type="checkbox" name="attr_show_death_failures_flag" value="1" checked="checked" /> <span>Show Death Save Failures Only</span></label>
+                                            <label class="sheet-form-checkbox" title="@{show_death_failures_flag}"><input type="checkbox" name="attr_show_death_failures_flag" value="1" /> <span>Show Death Save Failures Only</span></label>
                                         </div>
                                         <div class="sheet-form-group">
                                             <label class="sheet-form-checkbox" title="@{show_exhaustion_flag}"><input type="checkbox" name="attr_show_exhaustion_flag" value="1" checked="checked" /> <span>Show Exhaustion Table</span></label>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label class="sheet-form-checkbox" title="@{show_stress_flag}"><input type="checkbox" name="attr_show_stress_flag" value="1" checked="checked" /> <span>Show Stress &amp; Afflictions</span></label>
+                                            <label class="sheet-form-checkbox" title="@{show_stress_flag}"><input type="checkbox" name="attr_show_stress_flag" value="1" /> <span>Show Stress &amp; Afflictions</span></label>
                                         </div>
                                         <div class="sheet-form-group">
                                             <label class="sheet-form-checkbox" title="@{show_survival_conditions}"><input type="checkbox" name="attr_show_survival_conditions" value="1" checked="checked" /> <span>Show Survival Conditions</span></label>
@@ -5901,7 +5909,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Deception Modifier:</label> <input type="text" name="attr_deception_flat" placeholder="0" title="@{deception_flat}" /> <select name="attr_deception_type" title="@{deception_type}">
+                                            <label>History Modifier:</label> <input type="text" name="attr_history_flat" placeholder="0" title="@{history_flat}" /> <select name="attr_history_type" title="@{history_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5911,7 +5919,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>History Modifier:</label> <input type="text" name="attr_history_flat" placeholder="0" title="@{history_flat}" /> <select name="attr_history_type" title="@{history_type}">
+                                            <label>Influence Modifier:</label> <input type="text" name="attr_influence_flat" placeholder="0" title="@{influence_flat}" /> <select name="attr_influence_type" title="@{influence_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5991,16 +5999,6 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Persuasion Modifier:</label> <input type="text" name="attr_persuasion_flat" placeholder="0" title="@{persuasion_flat}" /> <select name="attr_persuasion_type" title="@{persuasion_type}">
-                                                <option value="1" selected="selected">
-                                                    Normal
-                                                </option>
-                                                <option value="2">
-                                                    Expertise
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="sheet-form-group">
                                             <label>Religion Modifier:</label> <input type="text" name="attr_religion_flat" placeholder="0" title="@{religion_flat}" /> <select name="attr_religion_type" title="@{religion_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
@@ -6032,6 +6030,16 @@
                                         </div>
                                         <div class="sheet-form-group">
                                             <label>Survival Modifier:</label> <input type="text" name="attr_survival_flat" placeholder="0" title="@{survival_flat}" /> <select name="attr_survival_type" title="@{survival_type}">
+                                                <option value="1" selected="selected">
+                                                    Normal
+                                                </option>
+                                                <option value="2">
+                                                    Expertise
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sheet-form-group">
+                                            <label>Wile Modifier:</label> <input type="text" name="attr_wile_flat" placeholder="0" title="@{wile_flat}" /> <select name="attr_wile_type" title="@{wile_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>

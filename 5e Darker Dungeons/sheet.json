@@ -1,7 +1,7 @@
 {
   "html": "5e Darker Dungeons.html",
   "css": "5e Darker Dungeons.css",
-  "authors": "Giffyglyph",
+  "authors": "Giffyglyph & Lars Kroll",
   "roll20userid": "3610067",
   "preview": "5e Darker Dungeons.png",
   "compendium": "dnd5e",
@@ -49,7 +49,7 @@
                 "Don't Auto Roll Damage|pick",
                 "Auto Roll Damage & Crit|full"
             ],
-            "default": "pick",
+            "default": "full",
             "description": "By default, attack damage rolls are not rolled until the hit is confirmed. Damage is rolled from the chat roll template by clicking on the name of the attack in the right hand bar, which then displays the damage. The default method is compatible with 3D dice. Optionally, you can choose to have the Auto Roll Damage & Crit option which will roll damage and critical hit dice at the same time of the attack, presenting all possible outcomes at the time of the attack."
         },
         {
@@ -83,6 +83,7 @@
             "displayname": "Add DEX Tiebreaker to Initiative:",
             "type": "checkbox",
             "value": "@{dexterity}/100",
+            "checked": "checked",
             "description": "Adds the character's dexterity score as a decimal to the end of the initiative bonus for purposes of breaking ties."
         },
         {
@@ -90,6 +91,7 @@
             "displayname": "Show Global Save Modifiers:",
             "type": "checkbox",
             "value": "1",
+            "checked": "checked",
             "description": "Creates a custom global save modifier field, underneath the SAVING THROWS section of the character sheet. Anything put there will be applied to any save roll. Perfect for regular but not permanent bonuses like the Bless spell."
         },
         {
@@ -97,6 +99,7 @@
             "displayname": "Show Global Skill Modifiers:",
             "type": "checkbox",
             "value": "1",
+            "checked": "checked",
             "description": "Creates a custom global skill modifier field, underneath the SKILLS section of the character sheet. Anything put there will be applied to any save roll. Perfect for regular but not permanent bonuses like the Guidance spell."
         },
         {
@@ -104,6 +107,7 @@
             "displayname": "Show Global Attack Modifiers:",
             "type": "checkbox",
             "value": "1",
+            "checked": "checked",
             "description": "Creates a custom global attack modifier field, underneath the ATTACKS AND SPELL CASTING section of the character sheet. Anything put there will be applied to any attack to-hit roll. Perfect for regular but not permanent bonuses to attack like the Bless spell."
         },
         {
@@ -111,6 +115,7 @@
             "displayname": "Show Global Damage Modifiers:",
             "type": "checkbox",
             "value": "1",
+            "checked": "checked",
             "description": "Creates a custom global damage modifier field, underneath the ATTACKS AND SPELL CASTING section of the character sheet. Anything put there will be applied to any attack damage roll. Perfect for regular but not permanent bonuses to damage like the Sneak Attack ability."
         },
         {
@@ -121,7 +126,7 @@
                 "On|{{charname=@{character_name}}}",
                 "Off|charname=@{character_name}"
             ],
-            "default": "charname=@{character_name}",
+            "default": "{{charname=@{character_name}}}",
             "description": "Character names are not added to the roll template by default, and are only displayed as normal in the chat tab as the player/character selected as 'Speaking As'. Turning this option on adds the character making the roll's name to the template, useful for players representing multiple characters."
         },
         {
@@ -281,7 +286,6 @@
             "displayname": "Death Save Failures Only",
             "type": "checkbox",
             "value": "1",
-            "checked" : "checked",
             "description": "[Giffyglyph's Darker Dungeons] Track only death save failures."
         },
         {
@@ -289,7 +293,6 @@
             "displayname": "Show Stress",
             "type": "checkbox",
             "value": "1",
-            "checked" : "checked",
             "description": "[Giffyglyph's Darker Dungeons] Show the Stress panel, used for tracking your character's mental stress and afflicitions."
         },
         {
