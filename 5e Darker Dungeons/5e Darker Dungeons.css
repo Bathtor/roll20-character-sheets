@@ -2897,7 +2897,8 @@
       border-radius: 3px; }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes > input[type="radio"]:checked ~ .sheet-tab-content {
-  display: grid; }
+  display: grid; 
+}
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -95,7 +95,7 @@
                             <label>History</label> <input type="text" name="attr_npc_history_base" />
                         </div>
                         <div class="sheet-form-group">
-                            <label>Influence</label> <input type="text" name="attr_npc_influence_base" />
+                            <label>Rhetoric</label> <input type="text" name="attr_npc_rhetoric_base" />
                         </div>
                         <div class="sheet-form-group">
                             <label>Insight</label> <input type="text" name="attr_npc_insight_base" />
@@ -137,7 +137,7 @@
                         <input type="hidden" name="attr_npc_animal_handling" value="@{wisdom_mod}" />
                         <input type="hidden" name="attr_npc_arcana" value="@{intelligence_mod}" />
                         <input type="hidden" name="attr_npc_athletics" value="@{strength_mod}" />
-                        <input type="hidden" name="attr_npc_influence" value="@{charisma_mod}" />
+                        <input type="hidden" name="attr_npc_rhetoric" value="@{charisma_mod}" />
                         <input type="hidden" name="attr_npc_history" value="@{intelligence_mod}" />
                         <input type="hidden" name="attr_npc_insight" value="@{wisdom_mod}" />
                         <input type="hidden" name="attr_npc_intimidation" value="@{charisma_mod}" />
@@ -342,7 +342,7 @@
                         <input type="hidden" name="attr_npc_history_flag" value="0" class="sheet-field-toggle" /> <button type="roll" name="roll_npc_history" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=History}} {{mod=@{npc_history}}} {{r1=[[@{d20}+@{npc_history}]]}} @{rtype}+@{npc_history}]]}} {{type=Skill}}"><span><span><span><span><span>History</span> <span name="attr_npc_history"></span></span></span></span></span></button>
                     </span>
                     <span>
-                        <input type="hidden" name="attr_npc_influence_flag" value="0" class="sheet-field-toggle" /> <button type="roll" name="roll_npc_influence" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Influence}} {{mod=@{npc_influence}}} {{r1=[[@{d20}+@{npc_influence}]]}} @{rtype}+@{npc_influence}]]}} {{type=Skill}}"><span><span><span><span><span>Influence</span> <span name="attr_npc_influence"></span></span></span></span></span></button>
+                        <input type="hidden" name="attr_npc_rhetoric_flag" value="0" class="sheet-field-toggle" /> <button type="roll" name="roll_npc_rhetoric" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Rhetoric}} {{mod=@{npc_rhetoric}}} {{r1=[[@{d20}+@{npc_rhetoric}]]}} @{rtype}+@{npc_rhetoric}]]}} {{type=Skill}}"><span><span><span><span><span>Rhetoric</span> <span name="attr_npc_rhetoric"></span></span></span></span></span></button>
                     </span>
                     <span>
                         <input type="hidden" name="attr_npc_insight_flag" value="0" class="sheet-field-toggle" /> <button type="roll" name="roll_npc_insight" value="@{wtype}&{template:npc} @{npc_name_flag} {{rname=Insight}} {{mod=@{npc_insight}}} {{r1=[[@{d20}+@{npc_insight}]]}} @{rtype}+@{npc_insight}]]}} {{type=Skill}}"><span><span><span><span><span>Insight</span> <span name="attr_npc_insight"></span></span></span></span></span></button>

@@ -122,7 +122,7 @@ on("sheet:compendium-drop", function() {
                 update_skills(["animal_handling", "insight", "medicine", "perception", "survival"]);
                 break;
             case "charisma":
-                update_skills(["influence", "intimidation", "performance"]);
+                update_skills(["rhetoric", "intimidation", "performance"]);
                 break;
             default:
                 false;
@@ -153,7 +153,7 @@ on("change:death_save_mod", function(eventinfo) {
     update_save("death");
 });
 
-['acrobatics', 'animal_handling', 'arcana', 'athletics', 'history', 'influence', 'insight', 'intimidation', 'investigation', 'medicine', 'nature', 'perception', 'performance', 'religion', 'sleight_of_hand', 'stealth', 'survival', 'wile'].forEach(attr => {
+['acrobatics', 'animal_handling', 'arcana', 'athletics', 'history', 'rhetoric', 'insight', 'intimidation', 'investigation', 'medicine', 'nature', 'perception', 'performance', 'religion', 'sleight_of_hand', 'stealth', 'survival', 'wile'].forEach(attr => {
     on(`change:${attr}_prof change:${attr}_type change:${attr}_flat`, function(eventinfo) {
         if (eventinfo.sourceType === "sheetworker") {
             return;
@@ -529,7 +529,7 @@ on("change:npc_str_save_base change:npc_dex_save_base change:npc_con_save_base c
     update_npc_saves();
 });
 
-on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_influence_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_wile_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
+on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_rhetoric_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_wile_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
     update_npc_skills();
 });
 
@@ -821,7 +821,7 @@ var update_all_saves = function() {
 
 var update_all_ability_checks = function() {
     update_initiative();
-    update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "influence", "intimidation", "performance", "wile"]);
+    update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "rhetoric", "intimidation", "performance", "wile"]);
 };
 
 var update_skills = function(skills_array) {
@@ -840,7 +840,7 @@ var update_skills = function(skills_array) {
         medicine: "wisdom",
         perception: "wisdom",
         survival: "wisdom",
-        influence: "charisma",
+        rhetoric: "charisma",
         intimidation: "charisma",
         performance: "charisma",
         wile: "intelligence"
@@ -1698,7 +1698,7 @@ var processDrop = function(page, currentData, repeating, looped) {
         update["npc_animal_handling_base"] = "";
         update["npc_arcana_base"] = "";
         update["npc_athletics_base"] = "";
-        update["npc_influence_base"] = "";
+        update["npc_rhetoric_base"] = "";
         update["npc_history_base"] = "";
         update["npc_insight_base"] = "";
         update["npc_intimidation_base"] = "";
@@ -2753,8 +2753,8 @@ var check_itemmodifiers = function(modifiers, previousValue) {
         if (mod.indexOf("athletics") > -1) {
             update_skills(["athletics"]);
         };
-        if (mod.indexOf("influence") > -1) {
-            update_skills(["influence"]);
+        if (mod.indexOf("rhetoric") > -1) {
+            update_skills(["rhetoric"]);
         };
         if (mod.indexOf("history") > -1) {
             update_skills(["history"]);
@@ -4561,7 +4561,7 @@ var update_pb = function() {
             update_all_saves();
         });
         callbacks.push(function() {
-            update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "influence", "intimidation", "performance", "wile"]);
+            update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "rhetoric", "intimidation", "performance", "wile"]);
         });
 
         setAttrs(update, {
@@ -4978,7 +4978,7 @@ var update_npc_saves = function() {
 };
 
 var update_npc_skills = function() {
-    getAttrs(["npc_acrobatics_base", "npc_animal_handling_base", "npc_arcana_base", "npc_athletics_base", "npc_influence_base", "npc_history_base", "npc_insight_base", "npc_intimidation_base", "npc_investigation_base", "npc_medicine_base", "npc_nature_base", "npc_perception_base", "npc_performance_base", "npc_wile_base", "npc_religion_base", "npc_sleight_of_hand_base", "npc_stealth_base", "npc_survival_base"], function(v) {
+    getAttrs(["npc_acrobatics_base", "npc_animal_handling_base", "npc_arcana_base", "npc_athletics_base", "npc_rhetoric_base", "npc_history_base", "npc_insight_base", "npc_intimidation_base", "npc_investigation_base", "npc_medicine_base", "npc_nature_base", "npc_perception_base", "npc_performance_base", "npc_wile_base", "npc_religion_base", "npc_sleight_of_hand_base", "npc_stealth_base", "npc_survival_base"], function(v) {
         var update = {};
         var last_skill = 0;
         var survival_flag = 0;
@@ -5009,8 +5009,8 @@ var update_npc_skills = function() {
         var insight = "";
         var history_flag = 0;
         var history = "";
-        var influence_flag = 0;
-        var influence = "";
+        var rhetoric_flag = 0;
+        var rhetoric = "";
         var athletics_flag = 0;
         var athletics = "";
         var arcana_flag = 0;
@@ -5177,17 +5177,17 @@ var update_npc_skills = function() {
             history_flag = 0;
             history = "";
         };
-        if (v.npc_influence_base && v.npc_influence_base != "@{charisma_mod}") {
-            influence = parseInt(v.npc_influence_base, 10);
+        if (v.npc_rhetoric_base && v.npc_rhetoric_base != "@{charisma_mod}") {
+            rhetoric = parseInt(v.npc_rhetoric_base, 10);
             if (last_skill === 0) {
                 last_skill = 1;
-                influence_flag = influence < 0 ? 4 : 2;
+                rhetoric_flag = rhetoric < 0 ? 4 : 2;
             } else {
-                influence_flag = influence < 0 ? 3 : 1;
+                rhetoric_flag = rhetoric < 0 ? 3 : 1;
             }
         } else {
-            influence_flag = 0;
-            influence = "";
+            rhetoric_flag = 0;
+            rhetoric = "";
         };
         if (v.npc_athletics_base && v.npc_athletics_base != "@{strength_mod}") {
             athletics = parseInt(v.npc_athletics_base, 10);
@@ -5238,7 +5238,7 @@ var update_npc_skills = function() {
             acrobatics = "";
         };
 
-        update["npc_skills_flag"] = "" + acrobatics + animal_handling + arcana + athletics + influence + history + insight + intimidation + investigation + medicine + nature + perception + sperformance + wile + religion + sleight_of_hand + stealth + survival;
+        update["npc_skills_flag"] = "" + acrobatics + animal_handling + arcana + athletics + rhetoric + history + insight + intimidation + investigation + medicine + nature + perception + sperformance + wile + religion + sleight_of_hand + stealth + survival;
         update["npc_stealth_flag"] = stealth_flag;
         update["npc_survival"] = survival;;
         update["npc_acrobatics"] = acrobatics;
@@ -5249,8 +5249,8 @@ var update_npc_skills = function() {
         update["npc_arcana_flag"] = arcana_flag;
         update["npc_athletics"] = athletics;
         update["npc_athletics_flag"] = athletics_flag;
-        update["npc_influence"] = influence;
-        update["npc_influence_flag"] = influence_flag;
+        update["npc_rhetoric"] = rhetoric;
+        update["npc_rhetoric_flag"] = rhetoric_flag;
         update["npc_history"] = history;
         update["npc_history_flag"] = history_flag;
         update["npc_insight"] = insight;

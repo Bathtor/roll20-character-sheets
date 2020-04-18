@@ -321,13 +321,6 @@
                                 </div>
                                 <div class="sheet-pc-skill">
                                     <div class="sheet-checkbox-image">
-                                        <input type="checkbox" name="attr_influence_prof" title="@{influence_prof}" value="(@{pb}*@{influence_type})" /> <span></span>
-                                    </div>
-                                    <input type="hidden" name="attr_influence_bonus" />
-                                    <span class="sheet-modifier-display" name='attr_influence_bonus' title='@{influence_bonus}'>0</span> <button type='roll' name='roll_influence' value='@{wtype}&{template:simple} {{rname=Influence}} {{mod=@{influence_bonus}}} {{r1=[[@{d20}+@{influence_bonus}@{pbd_safe}]]}} @{rtype}+@{influence_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Influence <span>(Cha)</span></button>
-                                </div>
-                                <div class="sheet-pc-skill">
-                                    <div class="sheet-checkbox-image">
                                         <input type="checkbox" name="attr_insight_prof" title="@{insight_prof}" value="(@{pb}*@{insight_type})" /> <span></span>
                                     </div>
                                     <input type="hidden" name="attr_insight_bonus" />
@@ -381,6 +374,13 @@
                                     </div>
                                     <input type="hidden" name="attr_religion_bonus" />
                                     <span class="sheet-modifier-display" name='attr_religion_bonus' title='@{religion_bonus}'>0</span> <button type='roll' name='roll_religion' value='@{wtype}&{template:simple} {{rname=Religion}} {{mod=@{religion_bonus}}} {{r1=[[@{d20}+@{religion_bonus}@{pbd_safe}]]}} @{rtype}+@{religion_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Religion <span>(Int)</span></button>
+                                </div>
+                                <div class="sheet-pc-skill">
+                                    <div class="sheet-checkbox-image">
+                                        <input type="checkbox" name="attr_rhetoric_prof" title="@{rhetoric_prof}" value="(@{pb}*@{rhetoric_type})" /> <span></span>
+                                    </div>
+                                    <input type="hidden" name="attr_rhetoric_bonus" />
+                                    <span class="sheet-modifier-display" name='attr_rhetoric_bonus' title='@{rhetoric_bonus}'>0</span> <button type='roll' name='roll_rhetoric' value='@{wtype}&{template:simple} {{rname=Rhetoric}} {{mod=@{rhetoric_bonus}}} {{r1=[[@{d20}+@{rhetoric_bonus}@{pbd_safe}]]}} @{rtype}+@{rhetoric_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Rhetoric <span>(Cha)</span></button>
                                 </div>
                                 <div class="sheet-pc-skill">
                                     <div class="sheet-checkbox-image">
@@ -5935,16 +5935,6 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Influence Modifier:</label> <input type="text" name="attr_influence_flat" placeholder="0" title="@{influence_flat}" /> <select name="attr_influence_type" title="@{influence_type}">
-                                                <option value="1" selected="selected">
-                                                    Normal
-                                                </option>
-                                                <option value="2">
-                                                    Expertise
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="sheet-form-group">
                                             <label>Insight Modifier:</label> <input type="text" name="attr_insight_flat" placeholder="0" title="@{insight_flat}" /> <select name="attr_insight_type" title="@{insight_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
@@ -6016,6 +6006,16 @@
                                         </div>
                                         <div class="sheet-form-group">
                                             <label>Religion Modifier:</label> <input type="text" name="attr_religion_flat" placeholder="0" title="@{religion_flat}" /> <select name="attr_religion_type" title="@{religion_type}">
+                                                <option value="1" selected="selected">
+                                                    Normal
+                                                </option>
+                                                <option value="2">
+                                                    Expertise
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sheet-form-group">
+                                            <label>Rhetoric Modifier:</label> <input type="text" name="attr_rhetoric_flat" placeholder="0" title="@{rhetoric_flat}" /> <select name="attr_rhetoric_type" title="@{rhetoric_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
