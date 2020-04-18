@@ -1679,9 +1679,9 @@
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "primary-attributes primary-attributes primary-attributes" "attributes trackers trackers" "attributes health health" "attributes attacks effects";
+  grid-template-areas: "attributes primary-attributes primary-attributes" "attributes trackers trackers" "attributes health health" "attributes attacks effects";
   grid-template-columns: 25rem 1fr 1fr;
-  grid-template-rows: 9rem 9rem auto 1fr; 
+  grid-template-rows: 9rem 10rem auto 1fr; 
 }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-primary-attributes {
   grid-area: primary-attributes;
@@ -1970,10 +1970,10 @@
   grid-area: trackers;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 30px 30px;
+  grid-template-rows: 3rem 3rem 3rem;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "armor initiative perception speed fate fate" "armor initiative perception speed inspiration inspiration"; }
+  grid-template-areas: "armor initiative perception speed moxie moxie" "armor initiative perception speed destiny destiny" "armor initiative perception speed fate fate"; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-armor {
     border-color: #75B975;
     grid-area: armor; 
@@ -1993,9 +1993,14 @@
     grid-area: training;
     display: none; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-fate {
-    grid-area: fate; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-inspiration {
-    grid-area: inspiration; }
+    grid-area: fate; 
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-moxie {
+    grid-area: moxie; 
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-destiny {
+    grid-area: destiny; 
+  }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health {
   display: grid;
   grid-area: health;
