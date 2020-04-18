@@ -2901,10 +2901,11 @@
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  grid-template-areas: "backstory features features" "allies allies treasure"; }
+  grid-template-areas: "backstory features features" "allies allies treasure" "miscone miscone miscone" "misctwo misctwo misctwo"; 
+}
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes textarea {
     width: 100%;
     height: 100%;
@@ -2912,15 +2913,26 @@
     resize: none;
     border: 0;
     font-size: 11px;
-    line-height: 13px; }
+    line-height: 13px; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-features {
-    grid-area: features; }
+    grid-area: features; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-backstory {
-    grid-area: backstory; }
+    grid-area: backstory; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-allies {
-    grid-area: allies; }
+    grid-area: allies; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-treasure {
-    grid-area: treasure; }
+    grid-area: treasure; 
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-misc1 {
+    grid-area: miscone; 
+  }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-misc2 {
+    grid-area: misctwo; 
+  }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-header,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-burnout .sheet-container-header {
