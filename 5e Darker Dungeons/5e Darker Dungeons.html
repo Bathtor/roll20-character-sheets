@@ -2521,9 +2521,13 @@
                                         </option>
                                     </select>
                                 </div>
-                                <div class="sheet-pc-detail sheet-pc-detail-quest">
-                                    <label>Quest</label>
-                                    <textarea name="attr_character_quest" title="@{character_quest}"></textarea>
+                                <div class="sheet-pc-detail sheet-pc-detail-goals">
+                                    <label>Goals</label>
+                                    <textarea name="attr_character_goals" title="@{character_goals}"></textarea>
+                                </div>
+                                <div class="sheet-pc-detail sheet-pc-detail-faith">
+                                    <label>Faith</label>
+                                    <textarea name="attr_character_faith" title="@{character_faith}"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -7514,9 +7518,21 @@
 
 <rolltemplate class="sheet-rolltemplate-desc">
 	<div class="desc info">
-		<span>
-			<span class="top"></span><span class="middle">{{desc}}</span><span class="bottom"></span>
-		</span>
+		<div class="title row">
+			<span>{{title}}</span>
+		</div>
+		<div class="spacer"></div>
+		<div class="row">
+			<span>
+				<span class="top">{{content}}</span>
+				<span class="middle">{{desc}}</span>
+				<span class="bottom"></span>
+			</span>
+		</div>
+		<div class="spacer"></div>
+		<div class="italics row">
+			<span>{{footer}}</span>
+		</div>
 	</div>
 </rolltemplate>
 

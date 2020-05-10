@@ -1063,23 +1063,31 @@
 .withoutavatars .sheet-rolltemplate-spell .sheet-container {
   margin-left: -15px; }
 
-.sheet-rolltemplate-spell .sheet-row {
-  display: block; }
+.sheet-rolltemplate-spell .sheet-row,
+.sheet-rolltemplate-desc .sheet-row {
+  display: block; 
+}
 
-.sheet-rolltemplate-spell .sheet-title {
+.sheet-rolltemplate-spell .sheet-title,
+.sheet-rolltemplate-desc .sheet-title {
   color: #6A2A2C;
-  font-size: 1.2em; }
+  font-size: 1.2em; 
+}
 
 .sheet-rolltemplate-spell .sheet-italics,
-.sheet-npc .sheet-italics {
-  font-style: italic; }
+.sheet-npc .sheet-italics,
+.sheet-rolltemplate-desc .sheet-italics {
+  font-style: italic; 
+}
 
 .sheet-rolltemplate-spell .sheet-bold,
 .sheet-actions .sheet-bold {
   font-weight: bold; }
 
-.sheet-rolltemplate-spell .sheet-spacer {
-  height: 5px; }
+.sheet-rolltemplate-spell .sheet-spacer,
+.sheet-rolltemplate-desc .sheet-spacer {
+  height: 5px; 
+}
 
 .sheet-rolltemplate-npc,
 .sheet-rolltemplate-npcaction .sheet-container,
@@ -2079,7 +2087,7 @@
         margin-top: 3px; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-health {
     grid-area: health;
-    max-height: 135px; }
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds {
     grid-area: wounds; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds .sheet-container-body-header span:first-of-type {
@@ -2578,6 +2586,7 @@
     border-radius: 6px;
     position: absolute;
     z-index: 1;
+    white-space: pre-line;
   }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-popup .sheet-pc-itemcontent span:empty::after {
     content: ' – ';
@@ -2700,7 +2709,7 @@
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 36rem auto;
+  grid-template-rows: 40rem auto;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "details features" "memories features"; }
@@ -2785,11 +2794,16 @@
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-motivation label,
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-feature label {
       height: 100%; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-quest {
-    height: 40px; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-quest label {
-      height: 40px; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-quest textarea {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-goals,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-faith {
+    height: 40px; 
+  }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-goals label,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-faith label {
+      height: 40px; 
+    }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-goals textarea,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-details .sheet-pc-detail-faith textarea {
       height: 40px;
       font-size: 11px;
       border-top: 0;
@@ -2798,7 +2812,8 @@
       border-radius: 0;
       resize: none;
       padding: 0 4px;
-      line-height: 13px; }
+      line-height: 13px; 
+    }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-personality {
   grid-area: personality; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-ideals {
@@ -3037,6 +3052,10 @@
   font-family: 'Belleza', sans-serif;
   color: #50BFB0;
   font-weight: bold;
+}
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-spell-popup .sheet-spell-quickview p.sheet-spell-description {
+  white-space: pre-line;
 }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells > input[type="radio"]:checked ~ .sheet-tab-content {
