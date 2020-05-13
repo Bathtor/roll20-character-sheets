@@ -3425,10 +3425,12 @@
     border: 0;
     box-shadow: none;
     font-weight: bold;
-    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 3px;
     text-align: right;
-    width: 2em;
+    width: 3em;
     line-height: 1em;
 }
 
