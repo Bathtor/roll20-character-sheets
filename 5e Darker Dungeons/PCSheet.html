@@ -570,6 +570,45 @@
                                 </fieldset>
                             </div>
                         </div>
+                        <div class="sheet-container-panel sheet-pc-senses">
+                            <div class="sheet-container-header">
+                                Senses
+                            </div>
+                            <div class="sheet-container-body">
+                                <textarea name="attr_other_senses" placeholder="e.g., darkvision 60 ft."></textarea>
+                            </div>
+                        </div>
+                        <div class="sheet-container-panel sheet-pc-movement">
+                            <div class="sheet-container-header">
+                                Movement &amp; Speed
+                            </div>
+                            <div class="sheet-container-body">
+                                <div class="sheet-form sheet-form-borderless">
+                                    <div class="sheet-form-body">
+                                        <div class="sheet-form-group">
+                                            <label>Base</label>
+                                            <input type="number" min="0" step="1" name="attr_speed" placeholder="0" />
+                                        </div>
+                                        <div class="sheet-form-group">
+                                            <label>Burrow</label>
+                                            <input type="number" min="0" step="1" name="attr_speed_burrow" placeholder="0" />
+                                        </div>
+                                        <div class="sheet-form-group">
+                                            <label>Climb</label>
+                                            <input type="number" min="0" step="1" name="attr_speed_climb" placeholder="0" />
+                                        </div>
+                                        <div class="sheet-form-group">
+                                            <label>Fly</label>
+                                            <input type="number" min="0" step="1" name="attr_speed_fly" placeholder="0" />
+                                        </div>
+                                        <div class="sheet-form-group">
+                                            <label>Swim</label>
+                                            <input type="number" min="0" step="1" name="attr_speed_swim" placeholder="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="sheet-container-well sheet-container-well-trackers">
                         <div class="sheet-container-box sheet-pc-armor">
@@ -602,7 +641,7 @@
                                 Speed
                             </div>
                             <div class="sheet-container-body">
-                                <input type="number" min="0" step="1" name="attr_speed" title="@{speed}" />&nbsp;<span>ft.</span>
+                                <span name="attr_speed" title="@{speed}" ></span>&nbsp;<span>ft.</span>
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-fate">
