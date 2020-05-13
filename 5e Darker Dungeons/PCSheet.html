@@ -62,7 +62,7 @@
                             </select> <input type="hidden" name="attr_custom_class" class="sheet-field-toggle" /> <input type="text" name="attr_cust_classname" /> <label>Subclass:</label> <input type="text" name="attr_subclass" />
                         </div>
                         <div class="sheet-form-group">
-                            <label>Level:</label> <input type="number" name="attr_base_level" value="1" /> <label>Race:</label> <input type="text" name="attr_race" /> <label>Subrace:</label> <input type="text" name="attr_subrace" />
+                            <label>Level:</label> <input type="number" min="0" step="1" max="20" name="attr_base_level" value="1" /> <label>Race:</label> <input type="text" name="attr_race" /> <label>Subrace:</label> <input type="text" name="attr_subrace" />
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                                     <button type="roll" name="roll_strength" value="@{wtype}&{template:simple} {{rname=Strength}} {{mod=@{strength_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{strength_mod}@{jack_attr}[STR]]]}} @{rtype}+@{strength_mod}@{jack_attr}[STR]]]}} @{charname_output}" title="Strength">Str</button>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_strength_base" title="@{strength}" value="10">
+                                    <input type="number" min="0" step="1" max="99" name="attr_strength_base" title="@{strength}" value="10">
                                     <input type="hidden" name="attr_strength" value="10">
                                     <input type="hidden" name="attr_strength_flag" value="0" class="sheet-field-toggle">
                                     <span name="attr_strength"></span>
@@ -116,7 +116,7 @@
                                     <button type="roll" name="roll_dexterity" value="@{wtype}&{template:simple} {{rname=Dexterity}} {{mod=@{dexterity_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{dexterity_mod}@{jack_attr}[DEX]]]}} @{rtype}+@{dexterity_mod}@{jack_attr}[DEX]]]}} @{charname_output}" title="Dexterity">Dex</button>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_dexterity_base" title="@{dexterity}" value="10">
+                                    <input type="number" min="0" step="1" max="99" name="attr_dexterity_base" title="@{dexterity}" value="10">
                                     <input type="hidden" name="attr_dexterity" value="10">
                                     <input type="hidden" name="attr_dexterity_flag" value="0" class="sheet-field-toggle">
                                     <span name="attr_dexterity">
@@ -131,7 +131,7 @@
                                     <button type="roll" name="roll_constitution" value="@{wtype}&{template:simple} {{rname=Constitution}} {{mod=@{constitution_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{constitution_mod}@{jack_attr}[CON]]]}} @{rtype}+@{constitution_mod}@{jack_attr}[CON]]]}} @{charname_output}" title="Constitution">Con</button>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_constitution_base" title="@{constitution}" value="10">
+                                    <input type="number" min="0" step="1" max="99" name="attr_constitution_base" title="@{constitution}" value="10">
                                     <input type="hidden" name="attr_constitution" value="10">
                                     <input type="hidden" name="attr_constitution_flag" value="0" class="sheet-field-toggle">
                                     <span name="attr_constitution">
@@ -146,7 +146,7 @@
                                     <button type="roll" name="roll_intelligence" value="@{wtype}&{template:simple} {{rname=Intelligence}} {{mod=@{intelligence_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{rtype}+@{intelligence_mod}@{jack_attr}[INT]]]}} @{charname_output}" title="Intelligence">Int</button>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_intelligence_base" title="@{intelligence}" value="10">
+                                    <input type="number" min="0" step="1" max="99" name="attr_intelligence_base" title="@{intelligence}" value="10">
                                     <input type="hidden" name="attr_intelligence" value="10">
                                     <input type="hidden" name="attr_intelligence_flag" value="0" class="sheet-field-toggle">
                                     <span name="attr_intelligence">
@@ -161,7 +161,7 @@
                                     <button type="roll" name="roll_wisdom" value="@{wtype}&{template:simple} {{rname=Wisdom}} {{mod=@{wisdom_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{rtype}+@{wisdom_mod}@{jack_attr}[WIS]]]}} @{charname_output}" title="Wisdom">Wis</button>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_wisdom_base" title="@{wisdom}" value="10">
+                                    <input type="number" min="0" step="1" max="99" name="attr_wisdom_base" title="@{wisdom}" value="10">
                                     <input type="hidden" name="attr_wisdom" value="10">
                                     <input type="hidden" name="attr_wisdom_flag" value="0" class="sheet-field-toggle">
                                     <span name="attr_wisdom">
@@ -176,7 +176,7 @@
                                     <button type="roll" name="roll_charisma" value="@{wtype}&{template:simple} {{rname=Charisma}} {{mod=@{charisma_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{rtype}+@{charisma_mod}@{jack_attr}[CHA]]]}} @{charname_output}" title="Charisma">Cha</button>
                                 </div>
                                 <div class="sheet-container-footer">
-                                    <input type="text" name="attr_charisma_base" title="@{charisma}" value="10">
+                                    <input type="number" min="0" step="1" max="99" name="attr_charisma_base" title="@{charisma}" value="10">
                                     <input type="hidden" name="attr_charisma" value="10">
                                     <input type="hidden" name="attr_charisma_flag" value="0" class="sheet-field-toggle">
                                     <span name="attr_charisma">
@@ -577,7 +577,7 @@
                                 <button type="roll" name="roll_defence" value="@{wtype}&{template:simple} {{rname=Defence Roll}} {{mod=@{ac}}} {{r1=[[@{d20}+@{ac}]]}} @{rtype}+@{ac}]]}} @{charname_output}">Armor Class</button>
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_ac" title="@{ac}" />
+                                <input type="number" min="0" step="1" name="attr_ac" title="@{ac}" placeholder="10" />
                             </div>
                         </div>
                         <div class="sheet-container-box sheet-pc-initiative">
@@ -602,7 +602,7 @@
                                 Speed
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_speed" title="@{speed}" />
+                                <input type="number" min="0" step="1" name="attr_speed" title="@{speed}" />&nbsp;<span>ft.</span>
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-fate">
@@ -670,7 +670,7 @@
                                     Hit Points
                                 </div>
                                 <div class="sheet-container-body">
-                                    <input type="text" name="attr_hp_max" title="@{hp_max}" />
+                                    <input type="number" min="0" step="1" name="attr_hp_max" title="@{hp_max}" />
                                 </div>
                                 <div class="sheet-container-footer">
                                     Maximum
@@ -681,7 +681,7 @@
                                     Hit Points
                                 </div>
                                 <div class="sheet-container-body">
-                                    <input type="text" name="attr_hp" title="@{hp}" /> <input type="text" name="attr_hp_temp" title="@{hp_temp}" />
+                                    <input type="number" min="0" step="1" name="attr_hp" title="@{hp}" /> <input type="number" min="0" step="1" name="attr_hp_temp" title="@{hp_temp}" placeholder="0" />
                                 </div>
                                 <div class="sheet-container-footer">
                                     <span>Current</span> <span>Temporary</span>
@@ -692,7 +692,7 @@
                                     <button type="roll" name="roll_hit_dice" value="@{wtype}&{template:simple} {{rname=Hit Dice}} {{mod=D@{hitdie_final}+[[@{constitution_mod}[CON]]]}} {{r1=[[1d@{hitdie_final}+[[@{constitution_mod}]][CON]]]}} {{normal=1}} @{charname_output}">Hit Dice</button>
                                 </div>
                                 <div class="sheet-container-body">
-                                    <input type="text" name="attr_hit_dice" title="@{hit_dice}" /> <span>/</span> <input type="text" name="attr_hit_dice_max" title="@{hit_dice_max}" />
+                                    <input type="number" min="0" step="1" name="attr_hit_dice" title="@{hit_dice}" /> <span>/</span> <input type="number" min="0" step="1" name="attr_hit_dice_max" title="@{hit_dice_max}" />
                                 </div>
                                 <div class="sheet-container-footer">
                                     <span>Remaining</span> <span>Maximum</span>
@@ -823,7 +823,7 @@
                                         <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="0" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Perfect</span></label></li>
                                         <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="1" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Comfortable</span></label></li>
                                         <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="2" checked="checked" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Ok</span></label></li>
-                                        <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="3" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Noticable</span></label></li>
+                                        <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="3" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Noticeable</span></label></li>
                                         <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="4" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Uncomfortable</span></label></li>
                                         <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="5" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Overwhelming</span></label></li>
                                         <li><label class="sheet-radio"><input type="radio" name="attr_condition_temperature" value="6" title="@{condition_temperature}" /> <span title="@{condition_temperature}">Unbearable</span></label></li>
@@ -879,7 +879,7 @@
                                     Exhaustion
                                 </div>
                                 <div class="sheet-container-body">
-                                    <input type="text" name="attr_exhaustion_base" title="@{exhaustion_base}" value="0" /> <span name="attr_exhaustion_wounds" title="@{exhaustion_wounds}"></span> <span name="attr_exhaustion_conditions" title="@{exhaustion_conditions}"></span> <span name="attr_exhaustion_total" title="@{exhaustion_total}"></span>
+                                    <input type="number" min="0" step="1" max="6" name="attr_exhaustion_base" title="@{exhaustion_base}" value="0" /> <span name="attr_exhaustion_wounds" title="@{exhaustion_wounds}"></span> <span name="attr_exhaustion_conditions" title="@{exhaustion_conditions}"></span> <span name="attr_exhaustion_total" title="@{exhaustion_total}"></span>
                                 </div>
                                 <div class="sheet-container-footer">
                                     <span>Base</span> <span>Wounds</span> <span>Cond.</span> <span>Total</span>
@@ -936,18 +936,18 @@
                         </div>
                         <div class="sheet-container-box sheet-pc-resource-class">
                             <div class="sheet-container-header">
-                                <input type="text" name="attr_class_resource_name" title="@{class_resource_name}" class="sheet-input-overlay" /> <span name="attr_class_resource_name" title="@{class_resource_name}">Class Resource</span>
+                                <input type="text" name="attr_class_resource_name" title="@{class_resource_name}" class="sheet-input-overlay" placeholder="class resource" /> <span name="attr_class_resource_name" title="@{class_resource_name}">Class Resource</span>
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_class_resource" title="@{class_resource}" /> <span>/</span> <input type="text" name="attr_class_resource_max" title="@{class_resource_max}" />
+                                <input type="number" min="0" step="1" name="attr_class_resource" title="@{class_resource}" /> <span>/</span> <input type="number" min="0" step="1" name="attr_class_resource_max" title="@{class_resource_max}" />
                             </div>
                         </div>
                         <div class="sheet-container-box sheet-pc-resource-other">
                             <div class="sheet-container-header">
-                                <input type="text" name="attr_other_resource_name" title="@{other_resource_name}" class="sheet-input-overlay" /> <span name="attr_other_resource_name">Other Resource</span>
+                                <input type="text" name="attr_other_resource_name" title="@{other_resource_name}" class="sheet-input-overlay" placeholder="other resource" /> <span name="attr_other_resource_name">Other Resource</span>
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_other_resource" title="@{other_resource}" /> <span>/</span> <input type="text" name="attr_other_resource_max" title="@{other_resource_max}" />
+                                <input type="number" min="0" step="1" name="attr_other_resource" title="@{other_resource}" /> <span>/</span> <input type="number" min="0" step="1" name="attr_other_resource_max" title="@{other_resource_max}" />
                             </div>
                         </div>
                         <div class="sheet-container-box sheet-pc-burnout">
@@ -996,14 +996,26 @@
                                                         <label>Name:</label> <input type="text" name="attr_resourcename" />
                                                     </div>
                                                     <div class="sheet-form-group">
-                                                        <label>Amount:</label> <input type="text" name="attr_resourceamount" /> <label>Max:</label> <input type="text" name="attr_resourcemax" />
+                                                        <label>Amount:</label> <input type="number" name="attr_resourceamount" /> <label>Max:</label> <input type="number" name="attr_resourcemax" />
+                                                    </div>
+                                                    <div class="sheet-form-group">
+                                                        <label>Recovery:</label> 
+                                                        <select name="attr_resourcerecovery" >
+                                                            <option value="0" selected>Round</option>
+                                                            <option value="1">Short Rest</option>
+                                                            <option value="2">Night Rest</option>
+                                                            <option value="3">Long Rest</option>
+                                                            <option value="4">Manual</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="sheet-toggle-unchecked">
                                             <div class="sheet-pc-resource">
-                                                <span name="attr_resourcename"></span> <span name="attr_resourceamount"></span> <span name="attr_resourcemax"></span>
+                                                <span name="attr_resourcename"></span>
+                                                <span class="sheet-resource-recovery-display">(</span><input class="sheet-resource-amount-display" type="number" name="attr_resourceamount" />&nbsp;<span class="sheet-resource-max-display" name="attr_resourcemax"></span>
+                                                <span class="sheet-resource-recovery-display">(<input type="hidden" name="attr_resourcerecovery" value="0"><span></span>)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1861,7 +1873,7 @@
                                 Experience
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_experience" title="@{experience}" />
+                                <input type="number" min="0" step="1" name="attr_experience" title="@{experience}" placeholder="–" />
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-training">
@@ -2148,7 +2160,7 @@
                                 Copper
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_cp" title="@{cp}" />
+                                <input type="number" min="0" step="1" name="attr_cp" title="@{cp}" placeholder="0" />
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-purse-sp">
@@ -2156,7 +2168,7 @@
                                 Silver
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_sp" title="@{sp}" />
+                                <input type="number" min="0" step="1" name="attr_sp" title="@{sp}" placeholder="0" />
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-purse-gp">
@@ -2164,7 +2176,7 @@
                                 Gold
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_gp" title="@{gp}" />
+                                <input type="number" min="0" step="1" name="attr_gp" title="@{gp}" placeholder="0" />
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-purse-ep">
@@ -2172,7 +2184,7 @@
                                 Electrum
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_ep" title="@{ep}" />
+                                <input type="number" min="0" step="1" name="attr_ep" title="@{ep}" placeholder="0" />
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-purse-pp">
@@ -2180,15 +2192,15 @@
                                 Platinum
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_pp" title="@{pp}" />
+                                <input type="number" min="0" step="1" name="attr_pp" title="@{pp}" placeholder="0" />
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-purse-other">
                             <div class="sheet-container-header">
-                                <input type="text" name="attr_currency" title="@{currency}" />
+                                <input type="text" name="attr_currency" title="@{currency}" placeholder="Gems" />
                             </div>
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_currency_value" title="@{currency_value}" />
+                                <input type="number" min="0" step="1" name="attr_currency_value" title="@{currency_value}" placeholder="0" />
                             </div>
                         </div>
                     </div>
@@ -2209,8 +2221,9 @@
                             <div class="sheet-container-header">
                                 Inventory Slots
                             </div>
+                            <input type="hidden" name="attr_slotstotal" title="@{slotstotal}" /> 
                             <div class="sheet-container-body">
-                                <input type="text" name="attr_slotstotal" title="@{slotstotal}" /> <span>/</span> <span name="attr_slotsmaximum" title="@{slotsmaximum}"></span>
+                                <span name="attr_slotstotal" title="@{slotstotal}" ></span> <span>/</span> <span name="attr_slotsmaximum" title="@{slotsmaximum}"></span>
                             </div>
                             <div class="sheet-container-footer">
                                 <span>Current</span> <span>Maximum</span>
@@ -2284,10 +2297,10 @@
                                                         </div><input type="checkbox" name="attr_itemcontainer" value="1" class="sheet-toggle" hidden="" />
                                                         <div class="sheet-toggle-unchecked">
                                                             <div class="sheet-form-group">
-                                                                <label>Quantity</label> <input type="text" name="attr_itemcount" value="1" />
+                                                                <label>Quantity</label> <input type="number" min="0" step="1" name="attr_itemcount" value="1" />
                                                             </div>
                                                             <div class="sheet-form-group">
-                                                                <label>Weight:</label> <input type="text" name="attr_itemweight" /> <label class="sheet-form-checkbox"><input type="checkbox" name="attr_itemweightfixed" value="1" /> <span>Fixed (Ignore quantity)</span></label>
+                                                                <label>Weight:</label> <input type="number" min="0" step="0.1" name="attr_itemweight" /> <label class="sheet-form-checkbox"><input type="checkbox" name="attr_itemweightfixed" value="1" /> <span>Fixed (Ignore quantity)</span></label>
                                                             </div>
                                                             <div class="sheet-form-group">
                                                                 <label>Size:</label> <select name="attr_itemsize">
@@ -2322,7 +2335,7 @@
                                                             </div>
                                                             <div class="sheet-form-group sheet-item-columns-2">
                                                                 <div class="sheet-form-group">
-                                                                    <label>Notches:</label> <input type="text" name="attr_itemnotches" value="0" />
+                                                                    <label>Notches:</label> <input type="number" min="0" step="1" name="attr_itemnotches" value="0" />
                                                                 </div>
                                                                 <div class="sheet-form-group">
                                                                     <label>Quality:</label> <select name="attr_itemquality">
@@ -2423,7 +2436,7 @@
                                                         <span>Item Name</span> <span>Quantity</span> <span>Weight</span> <span>Slots</span> <span>Notches</span>
                                                     </div>
                                                     <div class="sheet-pc-item-content">
-                                                        <span class="sheet-pc-item-name"><input type="hidden" name="attr_equipped" value="1" class="sheet-field-toggle" /> <span class="sheet-pc-item-equipped"><strong>E</strong></span> <span name="attr_itemname"></span></span> <span class="sheet-pc-item-quantity"><span name="attr_itemcount"></span></span> <span class="sheet-pc-item-weight"><span name="attr_itemweight"></span></span> <span class="sheet-pc-item-slots"><span name="attr_itemsize"></span></span> <span class="sheet-pc-item-notches"><span name="attr_itemnotches"></span></span>
+                                                        <span class="sheet-pc-item-name"><input type="hidden" name="attr_equipped" value="1" class="sheet-field-toggle" /> <span class="sheet-pc-item-equipped"><strong>E</strong></span> <span name="attr_itemname"></span></span> <span class="sheet-pc-item-quantity"><input type="number" min="0" step="1" name="attr_itemcount" /></span> <span class="sheet-pc-item-weight"><span name="attr_itemweight"></span></span> <span class="sheet-pc-item-slots"><span name="attr_itemsize"></span></span> <span class="sheet-pc-item-notches"><span name="attr_itemnotches"></span></span>
                                                     </div>
                                                     <div class="sheet-pc-item-popup">
                                                         <span class="sheet-pc-itemcontent"><span name="attr_itemcontent"></span></span>
@@ -2826,7 +2839,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">1</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl1_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl1_slots_expended}" /> <span>/</span><span name="attr_lvl1_slots_total" class="sheet-spells-total" title="@{lvl1_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">1</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl1_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl1_slots_expended}" /> <span>/</span><span name="attr_lvl1_slots_total" class="sheet-spells-total" title="@{lvl1_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-1">
@@ -3086,7 +3099,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">2</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl2_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl2_slots_expended}" /> <span>/</span><span name="attr_lvl2_slots_total" class="sheet-spells-total" title="@{lv2_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">2</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl2_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl2_slots_expended}" /> <span>/</span><span name="attr_lvl2_slots_total" class="sheet-spells-total" title="@{lv2_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-2">
@@ -3346,7 +3359,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">3</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl3_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl3_slots_expended}" /> <span>/</span><span name="attr_lvl3_slots_total" class="sheet-spells-total" title="@{lv3_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">3</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl3_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl3_slots_expended}" /> <span>/</span><span name="attr_lvl3_slots_total" class="sheet-spells-total" title="@{lv3_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-3">
@@ -3606,7 +3619,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">4</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl4_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl4_slots_expended}" /> <span>/</span><span name="attr_lvl4_slots_total" class="sheet-spells-total" title="@{lv4_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">4</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl4_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl4_slots_expended}" /> <span>/</span><span name="attr_lvl4_slots_total" class="sheet-spells-total" title="@{lv4_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-4">
@@ -3866,7 +3879,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">5</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl5_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl5_slots_expended}" /> <span>/</span><span name="attr_lvl5_slots_total" class="sheet-spells-total" title="@{lv5_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">5</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl5_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl5_slots_expended}" /> <span>/</span><span name="attr_lvl5_slots_total" class="sheet-spells-total" title="@{lv5_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-5">
@@ -4126,7 +4139,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">6</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl6_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl6_slots_expended}" /> <span>/</span><span name="attr_lvl6_slots_total" class="sheet-spells-total" title="@{lvl6_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">6</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl6_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl6_slots_expended}" /> <span>/</span><span name="attr_lvl6_slots_total" class="sheet-spells-total" title="@{lvl6_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-6">
@@ -4386,7 +4399,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">7</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl7_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl7_slots_expended}" /> <span>/</span><span name="attr_lvl7_slots_total" class="sheet-spells-total" title="@{lvl7_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">7</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl7_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl7_slots_expended}" /> <span>/</span><span name="attr_lvl7_slots_total" class="sheet-spells-total" title="@{lvl7_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-7">
@@ -4646,7 +4659,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">8</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl8_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl8_slots_expended}" /> <span>/</span><span name="attr_lvl8_slots_total" class="sheet-spells-total" title="@{lvl8_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">8</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl8_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl8_slots_expended}" /> <span>/</span><span name="attr_lvl8_slots_total" class="sheet-spells-total" title="@{lvl8_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-8">
@@ -4906,7 +4919,7 @@
                         </div>
                         <div class="sheet-container-spell">
                             <div class="sheet-container-header">
-                                <span class="sheet-spells-level">9</span> <span class="sheet-spells-slots"><input type="text" name="attr_lvl9_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl9_slots_expended}" /> <span>/</span><span name="attr_lvl9_slots_total" class="sheet-spells-total" title="@{lvl9_slots_total}">0</span><span>slots</span></span>
+                                <span class="sheet-spells-level">9</span> <span class="sheet-spells-slots"><input type="number" min="0" step="1" name="attr_lvl9_slots_expended" value="0" class="sheet-spells-expended" title="@{lvl9_slots_expended}" /> <span>/</span><span name="attr_lvl9_slots_total" class="sheet-spells-total" title="@{lvl9_slots_total}">0</span><span>slots</span></span>
                             </div>
                             <div class="sheet-container-body">
                                 <fieldset class="repeating_spell-9">
@@ -5201,13 +5214,13 @@
                                             <label>Carrying Capacity Modifier:</label> <input type="text" name="attr_carrying_capacity_mod" placeholder="*2/+2/-2" title="@{carrying_capacity_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Global Magic Attack Modifier:</label> <input type="text" name="attr_globalmagicmod" placeholder="0" title="@{globalmagicmod}" />
+                                            <label>Global Magic Attack Modifier:</label> <input type="number" step="1" name="attr_globalmagicmod" placeholder="0" title="@{globalmagicmod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Magic Caster Level:</label> <input type="text" name="attr_caster_level" title="@{caster_level}" />
+                                            <label>Magic Caster Level:</label> <input type="number" min="0" step="1" max="20" name="attr_caster_level" title="@{caster_level}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Spell Save DC Modifier:</label> <input type="text" name="attr_spell_dc_mod" placeholder="0" title="@{spell_dc_mod}" />
+                                            <label>Spell Save DC Modifier:</label> <input type="number" step="1" name="attr_spell_dc_mod" placeholder="0" title="@{spell_dc_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
                                             <label class="sheet-form-checkbox" title="@{halflingluck_flag}"><input type="checkbox" name="attr_halflingluck_flag" value="1" /> <span>Halfling Luck</span></label>
@@ -5267,7 +5280,7 @@
                                                 <option value="wizard">
                                                     Wizard
                                                 </option>
-                                            </select> <label>Level:</label> <input type="text" name="attr_multiclass1_lvl" value="1" title="@{multiclass1_lvl}" />
+                                            </select> <label>Level:</label> <input type="number" min="0" step="1" max="20" name="attr_multiclass1_lvl" value="1" title="@{multiclass1_lvl}" />
                                         </div>
                                         <div class="sheet-form-group">
                                             <label>Subclass:</label> <input type="text" name="attr_multiclass1_subclass" title="@{multiclass1_subclass}" />
@@ -5310,7 +5323,7 @@
                                                 <option value="wizard">
                                                     Wizard
                                                 </option>
-                                            </select> <label>Level:</label> <input type="text" name="attr_multiclass2_lvl" value="1" title="@{multiclass2_lvl}" />
+                                            </select> <label>Level:</label> <input type="number" min="0" step="1" max="20" name="attr_multiclass2_lvl" value="1" title="@{multiclass2_lvl}" />
                                         </div>
                                         <div class="sheet-form-group">
                                             <label>Subclass:</label> <input type="text" name="attr_multiclass2_subclass" title="@{multiclass2_subclass}" />
@@ -5353,7 +5366,7 @@
                                                 <option value="wizard">
                                                     Wizard
                                                 </option>
-                                            </select> <label>Level:</label> <input type="text" name="attr_multiclass3_lvl" value="1" title="@{multiclass3_lvl}" />
+                                            </select> <label>Level:</label> <input type="number" min="0" step="1" max="20" name="attr_multiclass3_lvl" value="1" title="@{multiclass3_lvl}" />
                                         </div>
                                         <div class="sheet-form-group">
                                             <label>Subclass:</label> <input type="text" name="attr_multiclass3_subclass" title="@{multiclass3_subclass}" />
@@ -5370,31 +5383,31 @@
                                 <div class="sheet-form sheet-form-borderless">
                                     <div class="sheet-form-body">
                                         <div class="sheet-form-group">
-                                            <label>Level 1:</label> <input type="text" name="attr_lvl1_slots_mod" placeholder="0" title="@{lvl1_slots_mod}" />
+                                            <label>Level 1:</label> <input type="number" step="1" name="attr_lvl1_slots_mod" placeholder="0" title="@{lvl1_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 2:</label> <input type="text" name="attr_lvl2_slots_mod" placeholder="0" title="@{lvl2_slots_mod}" />
+                                            <label>Level 2:</label> <input type="number" step="1" name="attr_lvl2_slots_mod" placeholder="0" title="@{lvl2_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 3:</label> <input type="text" name="attr_lvl3_slots_mod" placeholder="0" title="@{lvl3_slots_mod}" />
+                                            <label>Level 3:</label> <input type="number" step="1" name="attr_lvl3_slots_mod" placeholder="0" title="@{lvl3_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 4:</label> <input type="text" name="attr_lvl4_slots_mod" placeholder="0" title="@{lvl4_slots_mod}" />
+                                            <label>Level 4:</label> <input type="number" step="1" name="attr_lvl4_slots_mod" placeholder="0" title="@{lvl4_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 5:</label> <input type="text" name="attr_lvl5_slots_mod" placeholder="0" title="@{lvl5_slots_mod}" />
+                                            <label>Level 5:</label> <input type="number" step="1" name="attr_lvl5_slots_mod" placeholder="0" title="@{lvl5_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 6:</label> <input type="text" name="attr_lvl6_slots_mod" placeholder="0" title="@{lvl6_slots_mod}" />
+                                            <label>Level 6:</label> <input type="number" step="1" name="attr_lvl6_slots_mod" placeholder="0" title="@{lvl6_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 7:</label> <input type="text" name="attr_lvl7_slots_mod" placeholder="0" title="@{lvl7_slots_mod}" />
+                                            <label>Level 7:</label> <input type="number" step="1" name="attr_lvl7_slots_mod" placeholder="0" title="@{lvl7_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 8:</label> <input type="text" name="attr_lvl8_slots_mod" placeholder="0" title="@{lvl8_slots_mod}" />
+                                            <label>Level 8:</label> <input type="number" step="1" name="attr_lvl8_slots_mod" placeholder="0" title="@{lvl8_slots_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Level 9:</label> <input type="text" name="attr_lvl9_slots_mod" placeholder="0" title="@{lvl9_slots_mod}" />
+                                            <label>Level 9:</label> <input type="number" step="1" name="attr_lvl9_slots_mod" placeholder="0" title="@{lvl9_slots_mod}" />
                                         </div>
                                     </div>
                                 </div>
@@ -5703,25 +5716,25 @@
                                 <div class="sheet-form sheet-form-borderless">
                                     <div class="sheet-form-body">
                                         <div class="sheet-form-group">
-                                            <label>Strength Modifier:</label> <input type="text" name="attr_strength_bonus" placeholder="0" title="@{strength_bonus}" />
+                                            <label>Strength Modifier:</label> <input type="number" step="1" name="attr_strength_bonus" placeholder="0" title="@{strength_bonus}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Dexterity Modifier:</label> <input type="text" name="attr_dexterity_bonus" placeholder="0" title="@{dexterity_bonus}" />
+                                            <label>Dexterity Modifier:</label> <input type="number" step="1" name="attr_dexterity_bonus" placeholder="0" title="@{dexterity_bonus}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Constitution Modifier:</label> <input type="text" name="attr_constitution_bonus" placeholder="0" title="@{constitution_bonus}" />
+                                            <label>Constitution Modifier:</label> <input type="number" step="1" name="attr_constitution_bonus" placeholder="0" title="@{constitution_bonus}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Intelligence Modifier:</label> <input type="text" name="attr_intelligence_bonus" placeholder="0" title="@{intelligence_bonus}" />
+                                            <label>Intelligence Modifier:</label> <input type="number" step="1" name="attr_intelligence_bonus" placeholder="0" title="@{intelligence_bonus}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Wisdom Modifier:</label> <input type="text" name="attr_wisdom_bonus" placeholder="0" title="@{wisdom_bonus}" />
+                                            <label>Wisdom Modifier:</label> <input type="number" step="1" name="attr_wisdom_bonus" placeholder="0" title="@{wisdom_bonus}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Charisma Modifier:</label> <input type="text" name="attr_charisma_bonus" placeholder="0" title="@{charisma_bonus}" />
+                                            <label>Charisma Modifier:</label> <input type="number" step="1" name="attr_charisma_bonus" placeholder="0" title="@{charisma_bonus}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Initiative Modifier:</label> <input type="text" name="attr_initmod" placeholder="0" title="@{initmod}" />
+                                            <label>Initiative Modifier:</label> <input type="number" step="1" name="attr_initmod" placeholder="0" title="@{initmod}" />
                                         </div>
                                         <div class="sheet-form-group">
                                             <label>Initiative Style:</label> <select name="attr_initiative_style" title="@{initiative_style}">
@@ -5854,28 +5867,28 @@
                                 <div class="sheet-form sheet-form-borderless">
                                     <div class="sheet-form-body">
                                         <div class="sheet-form-group">
-                                            <label>Strength Save Modifier:</label> <input type="text" name="attr_strength_save_mod" placeholder="0" title="@{strength_save_mod}" />
+                                            <label>Strength Save Modifier:</label> <input type="number" step="1" name="attr_strength_save_mod" placeholder="0" title="@{strength_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Dexterity Save Modifier:</label> <input type="text" name="attr_dexterity_save_mod" placeholder="0" title="@{dexterity_save_mod}" />
+                                            <label>Dexterity Save Modifier:</label> <input type="number" step="1" name="attr_dexterity_save_mod" placeholder="0" title="@{dexterity_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Constitution Save Modifier:</label> <input type="text" name="attr_constitution_save_mod" placeholder="0" title="@{constitution_save_mod}" />
+                                            <label>Constitution Save Modifier:</label> <input type="number" step="1" name="attr_constitution_save_mod" placeholder="0" title="@{constitution_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Intelligence Save Modifier:</label> <input type="text" name="attr_intelligence_save_mod" placeholder="0" title="@{intelligence_save_mod}" />
+                                            <label>Intelligence Save Modifier:</label> <input type="number" step="1" name="attr_intelligence_save_mod" placeholder="0" title="@{intelligence_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Wisdom Save Modifier:</label> <input type="text" name="attr_wisdom_save_mod" placeholder="0" title="@{wisdom_save_mod}" />
+                                            <label>Wisdom Save Modifier:</label> <input type="number" step="1" name="attr_wisdom_save_mod" placeholder="0" title="@{wisdom_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Charisma Save Modifier:</label> <input type="text" name="attr_charisma_save_mod" placeholder="0" title="@{charisma_save_mod}" />
+                                            <label>Charisma Save Modifier:</label> <input type="number" step="1" name="attr_charisma_save_mod" placeholder="0" title="@{charisma_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Death Save Modifier:</label> <input type="text" name="attr_death_save_mod" placeholder="0" title="@{death_save_mod}" />
+                                            <label>Death Save Modifier:</label> <input type="number" step="1" name="attr_death_save_mod" placeholder="0" title="@{death_save_mod}" />
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Global Saving Throw Modifier:</label> <input type="text" name="attr_globalsavemod" placeholder="0" title="@{globalsavemod}" />
+                                            <label>Global Saving Throw Modifier:</label> <input type="number" step="1" name="attr_globalsavemod" placeholder="0" title="@{globalsavemod}" />
                                         </div>
                                     </div>
                                 </div>
@@ -5889,7 +5902,7 @@
                                 <div class="sheet-form sheet-form-borderless">
                                     <div class="sheet-form-borderless">
                                         <div class="sheet-form-group">
-                                            <label>Acrobatics Modifier:</label> <input type="text" name="attr_acrobatics_flat" placeholder="0" title="@{acrobatics_flat}" /> <select name="attr_acrobatics_type" title="@{acrobatics_type}">
+                                            <label>Acrobatics Modifier:</label> <input type="number" step="1" name="attr_acrobatics_flat" placeholder="0" title="@{acrobatics_flat}" /> <select name="attr_acrobatics_type" title="@{acrobatics_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5899,7 +5912,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Animal Handling Modifier:</label> <input type="text" name="attr_animal_handling_flat" placeholder="0" title="@{animal_handling_flat}" /> <select name="attr_animal_handling_type" title="@{animal_handling_type}">
+                                            <label>Animal Handling Modifier:</label> <input type="number" step="1" name="attr_animal_handling_flat" placeholder="0" title="@{animal_handling_flat}" /> <select name="attr_animal_handling_type" title="@{animal_handling_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5909,7 +5922,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Arcana Modifier:</label> <input type="text" name="attr_arcana_flat" placeholder="0" title="@{arcana_flat}" /> <select name="attr_arcana_type" title="@{arcana_type}">
+                                            <label>Arcana Modifier:</label> <input type="number" step="1" name="attr_arcana_flat" placeholder="0" title="@{arcana_flat}" /> <select name="attr_arcana_type" title="@{arcana_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5919,7 +5932,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Athletics Modifier:</label> <input type="text" name="attr_athletics_flat" placeholder="0" title="@{athletics_flat}" /> <select name="attr_athletics_type" title="@{athletics_type}">
+                                            <label>Athletics Modifier:</label> <input type="number" step="1" name="attr_athletics_flat" placeholder="0" title="@{athletics_flat}" /> <select name="attr_athletics_type" title="@{athletics_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5929,7 +5942,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>History Modifier:</label> <input type="text" name="attr_history_flat" placeholder="0" title="@{history_flat}" /> <select name="attr_history_type" title="@{history_type}">
+                                            <label>History Modifier:</label> <input type="number" step="1" name="attr_history_flat" placeholder="0" title="@{history_flat}" /> <select name="attr_history_type" title="@{history_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5939,7 +5952,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Insight Modifier:</label> <input type="text" name="attr_insight_flat" placeholder="0" title="@{insight_flat}" /> <select name="attr_insight_type" title="@{insight_type}">
+                                            <label>Insight Modifier:</label> <input type="number" step="1" name="attr_insight_flat" placeholder="0" title="@{insight_flat}" /> <select name="attr_insight_type" title="@{insight_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5949,7 +5962,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Intimidation Modifier:</label> <input type="text" name="attr_intimidation_flat" placeholder="0" title="@{intimidation_flat}" /> <select name="attr_intimidation_type" title="@{intimidation_type}">
+                                            <label>Intimidation Modifier:</label> <input type="number" step="1" name="attr_intimidation_flat" placeholder="0" title="@{intimidation_flat}" /> <select name="attr_intimidation_type" title="@{intimidation_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5959,7 +5972,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Investigation Modifier:</label> <input type="text" name="attr_investigation_flat" placeholder="0" title="@{investigation_flat}" /> <select name="attr_investigation_type" title="@{investigation_type}">
+                                            <label>Investigation Modifier:</label> <input type="number" step="1" name="attr_investigation_flat" placeholder="0" title="@{investigation_flat}" /> <select name="attr_investigation_type" title="@{investigation_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5969,7 +5982,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Medicine Modifier:</label> <input type="text" name="attr_medicine_flat" placeholder="0" title="@{medicine_flat}" /> <select name="attr_medicine_type" title="@{medicine_type}">
+                                            <label>Medicine Modifier:</label> <input type="number" step="1" name="attr_medicine_flat" placeholder="0" title="@{medicine_flat}" /> <select name="attr_medicine_type" title="@{medicine_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5979,7 +5992,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Nature Modifier:</label> <input type="text" name="attr_nature_flat" placeholder="0" title="@{nature_flat}" /> <select name="attr_nature_type" title="@{nature_type}">
+                                            <label>Nature Modifier:</label> <input type="number" step="1" name="attr_nature_flat" placeholder="0" title="@{nature_flat}" /> <select name="attr_nature_type" title="@{nature_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5989,7 +6002,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Perception Modifier:</label> <input type="text" name="attr_perception_flat" placeholder="0" title="@{perception_flat}" /> <select name="attr_perception_type" title="@{perception_type}">
+                                            <label>Perception Modifier:</label> <input type="number" step="1" name="attr_perception_flat" placeholder="0" title="@{perception_flat}" /> <select name="attr_perception_type" title="@{perception_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -5999,7 +6012,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Performance Modifier:</label> <input type="text" name="attr_performance_flat" placeholder="0" title="@{performance_flat}" /> <select name="attr_performance_type" title="@{performance_typ}">
+                                            <label>Performance Modifier:</label> <input type="number" step="1" name="attr_performance_flat" placeholder="0" title="@{performance_flat}" /> <select name="attr_performance_type" title="@{performance_typ}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6009,7 +6022,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Religion Modifier:</label> <input type="text" name="attr_religion_flat" placeholder="0" title="@{religion_flat}" /> <select name="attr_religion_type" title="@{religion_type}">
+                                            <label>Religion Modifier:</label> <input type="number" step="1" name="attr_religion_flat" placeholder="0" title="@{religion_flat}" /> <select name="attr_religion_type" title="@{religion_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6019,7 +6032,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Rhetoric Modifier:</label> <input type="text" name="attr_rhetoric_flat" placeholder="0" title="@{rhetoric_flat}" /> <select name="attr_rhetoric_type" title="@{rhetoric_type}">
+                                            <label>Rhetoric Modifier:</label> <input type="number" step="1" name="attr_rhetoric_flat" placeholder="0" title="@{rhetoric_flat}" /> <select name="attr_rhetoric_type" title="@{rhetoric_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6029,7 +6042,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Sleight of Hand Modifier:</label> <input type="text" name="attr_sleight_of_hand_flat" placeholder="0" title="@{sleight_of_hand_flat}" /> <select name="attr_sleight_of_hand_type" title="@{sleight_of_hand_type}">
+                                            <label>Sleight of Hand Modifier:</label> <input type="number" step="1" name="attr_sleight_of_hand_flat" placeholder="0" title="@{sleight_of_hand_flat}" /> <select name="attr_sleight_of_hand_type" title="@{sleight_of_hand_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6039,7 +6052,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Stealth Modifier:</label> <input type="text" name="attr_stealth_flat" placeholder="0" title="@{stealth_flat}" /> <select name="attr_stealth_type" title="@{stealth_type}">
+                                            <label>Stealth Modifier:</label> <input type="number" step="1" name="attr_stealth_flat" placeholder="0" title="@{stealth_flat}" /> <select name="attr_stealth_type" title="@{stealth_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6049,7 +6062,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Survival Modifier:</label> <input type="text" name="attr_survival_flat" placeholder="0" title="@{survival_flat}" /> <select name="attr_survival_type" title="@{survival_type}">
+                                            <label>Survival Modifier:</label> <input type="number" step="1" name="attr_survival_flat" placeholder="0" title="@{survival_flat}" /> <select name="attr_survival_type" title="@{survival_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6059,7 +6072,7 @@
                                             </select>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Wile Modifier:</label> <input type="text" name="attr_wile_flat" placeholder="0" title="@{wile_flat}" /> <select name="attr_wile_type" title="@{wile_type}">
+                                            <label>Wile Modifier:</label> <input type="number" step="1" name="attr_wile_flat" placeholder="0" title="@{wile_flat}" /> <select name="attr_wile_type" title="@{wile_type}">
                                                 <option value="1" selected="selected">
                                                     Normal
                                                 </option>
@@ -6072,7 +6085,7 @@
                                             <label class="sheet-form-checkbox" title="@{jack_of_all_trades}"><input type="checkbox" name="attr_jack_of_all_trades" value="@{jack}" /> <span>Jack of all Trade</span></label>
                                         </div>
                                         <div class="sheet-form-group">
-                                            <label>Passive Perception Modifier:</label> <input type="text" name="attr_passiveperceptionmod" placeholder="0" title="@{passiveperceptionmod}" />
+                                            <label>Passive Perception Modifier:</label> <input type="number" step="1" name="attr_passiveperceptionmod" placeholder="0" title="@{passiveperceptionmod}" />
                                         </div>
                                     </div>
                                 </div>
