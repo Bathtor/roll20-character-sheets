@@ -482,10 +482,9 @@
   border-bottom: 2px solid transparent;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-between;
   z-index: 2; }
   .charsheet .sheet-darkerdungeons .repcontainer.editmode .repitem .itemcontrol::before {
-    background: rgba(126, 45, 64, 0.25);
     border-radius: 6px;
     content: '';
     height: 100%;
@@ -501,8 +500,6 @@
   width: 36px; }
   .charsheet .sheet-darkerdungeons .repcontainer.editmode .repitem .itemcontrol .btn:not(:last-child) {
     margin-left: 10px; }
-.charsheet .sheet-darkerdungeons .repcontainer.editmode .repitem .sheet-fieldset-item {
-  opacity: 0.25; }
 .charsheet .sheet-darkerdungeons .sheet-fieldset-item {
   display: flex;
   flex-direction: column;
