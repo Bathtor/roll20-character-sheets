@@ -1685,9 +1685,9 @@
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "attributes primary-attributes primary-attributes" "attributes trackers trackers" "attributes health health" "attributes attacks effects";
+  grid-template-areas: "attributes primary-attributes primary-attributes" "attributes trackers trackers" "attributes chargoals chargoals" "attributes health health" "attributes attacks effects";
   grid-template-columns: 25rem 1fr 1fr;
-  grid-template-rows: 9rem 10rem auto 1fr; 
+  grid-template-rows: 10rem 10rem 11rem auto 1fr;
 }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-primary-attributes {
   grid-area: primary-attributes;
@@ -1719,11 +1719,13 @@
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill:not(:first-of-type) {
       border-top: 1px dotted #A6B0C1; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw .sheet-checkbox-image,
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-checkbox-image {
       height: 10px;
       width: 10px; }
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw .sheet-checkbox-image span,
-      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image span {
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image span,
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-checkbox-image span {
         padding: 1px; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw input,
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill input {
@@ -2024,6 +2026,60 @@
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-destiny {
     grid-area: destiny; 
   }
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals {
+  grid-area: chargoals;
+  display: flex;
+  flex-direction: column;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal {
+  display: flex;
+  align-items: center;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal span.sheet-character-goal-description,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal span.sheet-character-goal-xp {
+  text-align: left;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  height: 2em;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  color: inherit;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal span.sheet-character-goal-description {
+    flex-grow: 1;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-character-goal-description input,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-character-goal-xp input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  padding: 0 4px;
+  font-size: 11px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0px;
+}
+/*.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-checkbox-image input {
+  height: 10px;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-checkbox-image span {
+  height: 100%;
+}*/
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-character-goal-description input {
+  width: 100%;
+}
+/*.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal .sheet-character-goal-xp {
+  width: 4em;
+}*/
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-character-goals .sheet-character-goal label {
+  display: inline;
+  width: 2em;
+}
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health {
   display: grid;
   grid-area: health;

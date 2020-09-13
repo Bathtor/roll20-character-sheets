@@ -1350,7 +1350,7 @@
                                 Speed
                             </div>
                             <div class="sheet-container-body">
-                                <span name="attr_speed" title="@{speed}" ></span>&nbsp;<span>ft.</span>
+                                <span name="attr_speed" title="@{speed}"></span>&nbsp;<span>ft.</span>
                             </div>
                         </div>
                         <div class="sheet-container-bar sheet-pc-fate">
@@ -1407,6 +1407,51 @@
                                 </div>
                                 <div class="sheet-checkbox-image">
                                     <input type="checkbox" name="attr_destiny_3" title="@{destiny_3}" /> <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet-container-well sheet-container-well-character-goals">
+                        <div class="sheet-container-panel sheet-pc-character-goals">
+                            <div class="sheet-container-header">
+                                Character Goals
+                            </div>
+                            <div class="sheet-container-body">
+                                <div class="sheet-character-goal">
+                                    <div class="sheet-checkbox-image">
+                                        <input type="checkbox" name="attr_character_goal1_achieved" title="@{character_goal1_achieved}" value="1"><span></span>
+                                    </div>
+                                    <span class="sheet-character-goal-description">
+                                        <input type="text" name="attr_character_goal1_description" title="@{character_goal1_description}" placeholder="Describe your goal...">
+                                    </span>
+                                    <span>&nbsp;&mdash;&nbsp;</span>
+                                    <span class="sheet-character-goal-xp">
+                                        <input type="number" min="1" max="3" step="1" name="attr_character_goal1_xp" title="@{character_goal1_xp}">
+                                    </span><label>XP</label>
+                                </div>
+                                <div class="sheet-character-goal">
+                                    <div class="sheet-checkbox-image">
+                                        <input type="checkbox" name="attr_character_goal2_achieved" title="@{character_goal2_achieved}" value="1"><span></span>
+                                    </div>
+                                    <span class="sheet-character-goal-description">
+                                        <input type="text" name="attr_character_goal2_description" title="@{character_goal2_description}" placeholder="Describe your goal...">
+                                    </span>
+                                    <span>&nbsp;&mdash;&nbsp;</span>
+                                    <span class="sheet-character-goal-xp">
+                                        <input type="number" min="1" max="3" step="1" name="attr_character_goal2_xp" title="@{character_goal2_xp}">
+                                    </span><label>XP</label>
+                                </div>
+                                <div class="sheet-character-goal">
+                                    <div class="sheet-checkbox-image">
+                                        <input type="checkbox" name="attr_character_goal3_achieved" title="@{character_goal3_achieved}" value="1"><span></span>
+                                    </div>
+                                    <span class="sheet-character-goal-description">
+                                        <input type="text" name="attr_character_goal3_description" title="@{character_goal3_description}" placeholder="Describe your goal...">
+                                    </span>
+                                    <span>&nbsp;&mdash;&nbsp;</span>
+                                    <span class="sheet-character-goal-xp">
+                                        <input type="number" min="1" max="3" step="1" name="attr_character_goal3_xp" title="@{character_goal3_xp}">
+                                    </span><label>XP</label>
                                 </div>
                             </div>
                         </div>
@@ -1747,8 +1792,8 @@
                                                         <label>Amount:</label> <input type="number" name="attr_resourceamount" /> <label>Max:</label> <input type="number" name="attr_resourcemax" />
                                                     </div>
                                                     <div class="sheet-form-group">
-                                                        <label>Recovery:</label> 
-                                                        <select name="attr_resourcerecovery" >
+                                                        <label>Recovery:</label>
+                                                        <select name="attr_resourcerecovery">
                                                             <option value="0" selected>Round</option>
                                                             <option value="1">Short Rest</option>
                                                             <option value="2">Night Rest</option>
@@ -2969,9 +3014,9 @@
                             <div class="sheet-container-header">
                                 Inventory Slots
                             </div>
-                            <input type="hidden" name="attr_slotstotal" title="@{slotstotal}" /> 
+                            <input type="hidden" name="attr_slotstotal" title="@{slotstotal}" />
                             <div class="sheet-container-body">
-                                <span name="attr_slotstotal" title="@{slotstotal}" ></span> <span>/</span> <span name="attr_slotsmaximum" title="@{slotsmaximum}"></span>
+                                <span name="attr_slotstotal" title="@{slotstotal}"></span> <span>/</span> <span name="attr_slotsmaximum" title="@{slotsmaximum}"></span>
                             </div>
                             <div class="sheet-container-footer">
                                 <span>Current</span> <span>Maximum</span>
