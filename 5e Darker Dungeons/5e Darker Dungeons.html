@@ -8043,7 +8043,7 @@
         const cap = attr.charAt(0).toUpperCase() + attr.slice(1);
         check_customac(cap);
 
-        (attr === "strength") ? update_weight(): false;
+        (attr === "strength" || attr === "constitution") ? update_weight(): false;
         (attr === "dexterity") ? update_initiative(): false;
         (attr === "intelligence") ? update_initiative(): false;
     });
@@ -11730,7 +11730,7 @@ var update_weight = function() {
     var update = {};
     var wtotal = 0;
     var stotal = 0; // ITEM SLOTS
-    var weight_attrs = ["cp", "sp", "ep", "gp", "pp", "currency_value", "encumberance_setting", "strength", "strength_mod", "size", "carrying_capacity_mod", "inventory_slots_mod", "use_inventory_slots", "itemweightfixed", "itemslotsfixed"];
+    var weight_attrs = ["cp", "sp", "ep", "gp", "pp", "currency_value", "encumberance_setting", "strength", "strength_mod", "constitution", "constitution_mod", "size", "carrying_capacity_mod", "inventory_slots_mod", "use_inventory_slots", "itemweightfixed", "itemslotsfixed"];
     getSectionIDs("repeating_inventory", function(idarray) {
         _.each(idarray, function(currentID, i) {
             weight_attrs.push("repeating_inventory_" + currentID + "_itemweight");
@@ -11749,7 +11749,8 @@ var update_weight = function() {
             pp = isNaN(parseInt(v.pp, 10)) === false ? parseInt(v.pp, 10) : 0;
             currencyOther = isNaN(parseInt(v.currency_value, 10)) === false ? parseInt(v.currency_value, 10) : 0;
             wtotal = wtotal + ((cp + sp + ep + gp + pp + currencyOther) / 50);
-            stotal += Math.floor(Math.max(0, cp + sp + ep + gp + pp + currencyOther - 1) / 100);
+            // ignore currency for slots
+            //stotal += Math.floor(Math.max(0, cp + sp + ep + gp + pp + currencyOther - 1) / 100);
 
             _.each(idarray, function(currentID, i) {
                 if (v["repeating_inventory_" + currentID + "_equipped"] == 1 && !(v["repeating_inventory_" + currentID + "_itemcontainer"] == 1)) {
@@ -11797,8 +11798,8 @@ var update_weight = function() {
                         size_slots = 39
                     }
                 }
-
-                size_slots += parseInt(v.strength_mod, 10);
+                attr_slots = Math.max(parseInt(v.strength_mod, 10), parseInt(v.constitution_mod, 10));
+                size_slots += attr_slots;
 
                 if (v.inventory_slots_mod) {
                     var operator = v.inventory_slots_mod.substring(0, 1);
