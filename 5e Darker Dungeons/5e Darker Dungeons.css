@@ -244,6 +244,7 @@
   border: solid 2px #A6B0C1;
   background-color: #FFFFFF;
 }
+
   .charsheet .sheet-darkerdungeons .sheet-container-box .sheet-container-header {
     background: none;
     font-family: 'Belleza', sans-serif;
@@ -423,6 +424,8 @@
     padding: 5px;
     height: calc(100% - 2.5rem - 5px);
     z-index: 0;
+    display: flex;
+    flex-direction: column;
   }
     .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-container-body .sheet-container-body-header {
       text-transform: uppercase;
@@ -996,7 +999,7 @@
 .sheet-rolltemplate-desc .sheet-desc span {
   font-weight: normal;
   line-height: 12px;
-  display: block; }
+  display: inline-block; }
 
 .sheet-rolltemplate-atk .sheet-info span,
 .sheet-rolltemplate-atkdmg .sheet-info span,
@@ -2591,10 +2594,10 @@
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-template-columns: auto 40rem;
-  grid-template-rows: 85px 120px 110px auto;
+  grid-template-rows: 85px 120px 110px 85px auto;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "equipment supplies" "equipment purse" "equipment encumberance" "equipment general"; }
+  grid-template-areas: "equipment supplies" "equipment purse" "equipment encumberance" "equipment attuned" "equipment general"; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-equipment {
   grid-area: equipment;
   display: grid; }
@@ -2616,7 +2619,26 @@
   grid-area: encumberance;
   display: grid;
   grid-template-rows: 65px auto;
-  grid-row-gap: 5px; }
+  grid-row-gap: 5px; 
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-attuned {
+  grid-area: attuned;
+  display: grid;
+  grid-template-rows: 65px auto;
+  grid-row-gap: 5px; 
+}
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-attuned div.sheet-pc-attuned {
+  border: solid 4px #D46A6A;
+}
+
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-attuned input[value="0"] + div.sheet-pc-attuned,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-attuned input[value="1"] + div.sheet-pc-attuned,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-attuned input[value="2"] + div.sheet-pc-attuned,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-attuned input[value="3"] + div.sheet-pc-attuned {
+  border: solid 2px #A6B0C1;
+}
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-equipment-general {
   grid-area: general;
   display: grid;
@@ -2651,8 +2673,8 @@
     width: 50px;
     margin-left: 1px;
     text-align: center; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-equipped {
-  background: #6A2A2C;
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-equipped,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-attuned {
   color: white;
   display: inline-block;
   height: 14px;
@@ -2660,7 +2682,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%; }
+  border-radius: 100%; 
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-equipped {
+  background: #6A2A2C;
+}
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-attuned {
+  background: #4D658D;
+}
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item {
   font-size: 13px;
   padding-right: 20px; }
@@ -2787,12 +2816,14 @@
   padding-top: 5px;
   border-top: 1px dotted #dddddd; }
 .charsheet .sheet-darkerdungeons .sheet-pc-slots .sheet-container-body,
-.charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-body {
+.charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-body,
+.charsheet .sheet-darkerdungeons .sheet-pc-attuned .sheet-container-body {
   display: flex;
   flex-direction: row;
   padding-top: 0; }
   .charsheet .sheet-darkerdungeons .sheet-pc-slots .sheet-container-body span,
-  .charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-body span:nth-of-type(2) {
+  .charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-body span:nth-of-type(2),
+  .charsheet .sheet-darkerdungeons .sheet-pc-attuned .sheet-container-body span {
     align-items: center;
     color: #dddddd;
     display: flex;
@@ -2800,16 +2831,20 @@
     justify-content: center; }
   .charsheet .sheet-darkerdungeons .sheet-pc-slots .sheet-container-body span:nth-of-type(1),
   .charsheet .sheet-darkerdungeons .sheet-pc-slots .sheet-container-body span:nth-of-type(3),
-  .charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-body span:nth-of-type(2) {
+  .charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-body span:nth-of-type(2),
+  .charsheet .sheet-darkerdungeons .sheet-pc-attuned .sheet-container-body span:nth-of-type(1),
+  .charsheet .sheet-darkerdungeons .sheet-pc-attuned .sheet-container-body span:nth-of-type(3) {
     width: 100%;
     color: black; }
 .charsheet .sheet-darkerdungeons .sheet-pc-slots .sheet-container-footer,
-.charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-footer {
+.charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-footer,
+.charsheet .sheet-darkerdungeons .sheet-pc-attuned .sheet-container-footer {
   display: flex;
   padding-left: 10px;
   padding-right: 10px; }
   .charsheet .sheet-darkerdungeons .sheet-pc-slots .sheet-container-footer span,
-  .charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-footer span {
+  .charsheet .sheet-darkerdungeons .sheet-pc-weight .sheet-container-footer span,
+  .charsheet .sheet-darkerdungeons .sheet-pc-attuned .sheet-container-footer span {
     flex-grow: 1;
     text-align: center;
     width: 100%; }

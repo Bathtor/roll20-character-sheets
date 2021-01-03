@@ -347,6 +347,10 @@ on("change:repeating_inventory:itemcontainer change:repeating_inventory:equipped
     update_weight();
 });
 
+on("change:repeating_inventory:attuned", function() {
+    update_attuned();
+});
+
 on("change:repeating_inventory:itemmodifiers change:repeating_inventory:equipped", function(eventinfo) {
     if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
         return;
@@ -650,6 +654,7 @@ on("remove:repeating_inventory", function(eventinfo) {
     }
 
     update_weight();
+    update_attuned();
 });
 
 on("remove:repeating_attack", function(eventinfo) {
@@ -3772,6 +3777,29 @@ var remove_resource = function(id) {
             });
 
         };
+    });
+};
+
+var update_attuned = function() {
+    log("updating attuned");
+    var update = {};
+    var atotal = 0;
+    var attuned_attrs = [];
+    getSectionIDs("repeating_inventory", function(idarray) {
+        _.each(idarray, function(currentID, i) {
+            attuned_attrs.push("repeating_inventory_" + currentID + "_attuned");
+        });
+        getAttrs(attuned_attrs, function(v) {
+            _.each(idarray, function(currentID, i) {
+                if (v["repeating_inventory_" + currentID + "_attuned"] == 1) {
+                    atotal = atotal + 1;
+                }
+            });
+            update["attunedtotal"] = atotal;
+            setAttrs(update, {
+                silent: true
+            });
+        });
     });
 };
 

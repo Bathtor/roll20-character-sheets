@@ -3026,6 +3026,20 @@
                             <input type="hidden" class="sheet-pc-encumberance" name="attr_encumberance" /> <span class="sheet-pc-unencumbered">Unencumbered</span> <span class="sheet-pc-encumbered">Encumbered</span> <span class="sheet-pc-heavily">Heavily encumbered</span> <span class="sheet-pc-immobile">Immobile</span> <span class="sheet-pc-over">Over carrying capacity</span>
                         </div>
                     </div>
+                    <div class="sheet-container-well sheet-container-well-attuned">
+                        <input type="hidden" name="attr_attunedtotal" title="@{attunedtotal}" value="0"/>
+                        <div class="sheet-container-box sheet-pc-attuned">
+                            <div class="sheet-container-header">
+                                Attuned Items
+                            </div>
+                            <div class="sheet-container-body">
+                                <span name="attr_attunedtotal" title="@{attunedtotal}"></span> <span>/</span> <span>3</span>
+                            </div>
+                            <div class="sheet-container-footer">
+                                <span>Current</span> <span>Maximum</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="sheet-container-well sheet-container-well-equipment-general">
                         <div class="sheet-container-panel sheet-pc-equipment-other">
                             <div class="sheet-container-header">
@@ -3083,7 +3097,10 @@
                                                     Edit Item
                                                 </div>
                                                 <div class="sheet-form-body">
-                                                    <input type="hidden" name="attr_equipped" /> <input type="hidden" name="attr_inventorysubflag" /> <input type="hidden" name="attr_itemattackid" /> <input type="hidden" name="attr_itemresourceid" />
+                                                    <input type="hidden" name="attr_equipped" />
+                                                    <input type="hidden" name="attr_inventorysubflag" /> 
+                                                    <input type="hidden" name="attr_itemattackid" /> 
+                                                    <input type="hidden" name="attr_itemresourceid" />
                                                     <div class="sheet-item-contents">
                                                         <div class="sheet-form-group">
                                                             <label>Name:</label> <input type="text" name="attr_itemname" />
@@ -3207,6 +3224,9 @@
                                                             <label class="sheet-form-checkbox"><input type="checkbox" name="attr_equipped" value="1" checked="checked" /> <span>Equipped</span></label>
                                                         </div>
                                                         <div class="sheet-form-group">
+                                                            <label class="sheet-form-checkbox"><input type="checkbox" name="attr_attuned" value="1" /> <span>Attuned</span></label>
+                                                        </div>
+                                                        <div class="sheet-form-group">
                                                             <label class="sheet-form-checkbox"><input type="checkbox" name="attr_itemcontainer" value="1" /> <span>Container</span></label>
                                                         </div><input type="checkbox" name="attr_itemcontainer" value="1" class="sheet-toggle" hidden="" />
                                                         <div class="sheet-toggle-unchecked">
@@ -3229,7 +3249,7 @@
                                                         <span>Item Name</span> <span>Quantity</span> <span>Weight</span> <span>Slots</span> <span>Notches</span>
                                                     </div>
                                                     <div class="sheet-pc-item-content">
-                                                        <span class="sheet-pc-item-name"><input type="hidden" name="attr_equipped" value="1" class="sheet-field-toggle" /> <span class="sheet-pc-item-equipped"><strong>E</strong></span> <span name="attr_itemname"></span></span> <span class="sheet-pc-item-quantity"><input type="number" min="0" step="1" name="attr_itemcount" /></span> <span class="sheet-pc-item-weight"><span name="attr_itemweight"></span></span> <span class="sheet-pc-item-slots"><span name="attr_itemsize"></span></span> <span class="sheet-pc-item-notches"><span name="attr_itemnotches"></span></span>
+                                                        <span class="sheet-pc-item-name"><input type="hidden" name="attr_equipped" value="1" class="sheet-field-toggle" /> <span class="sheet-pc-item-equipped"><strong>E</strong></span><input type="hidden" name="attr_attuned" value="" class="sheet-field-toggle" /> <span class="sheet-pc-item-attuned"><strong>A</strong></span> <span name="attr_itemname"></span></span> <span class="sheet-pc-item-quantity"><input type="number" min="0" step="1" name="attr_itemcount" /></span> <span class="sheet-pc-item-weight"><span name="attr_itemweight"></span></span> <span class="sheet-pc-item-slots"><span name="attr_itemsize"></span></span> <span class="sheet-pc-item-notches"><span name="attr_itemnotches"></span></span>
                                                     </div>
                                                     <div class="sheet-pc-item-popup">
                                                         <span class="sheet-pc-itemcontent"><span name="attr_itemcontent"></span></span>
@@ -8298,6 +8318,10 @@ on("change:repeating_inventory:itemcontainer change:repeating_inventory:equipped
     update_weight();
 });
 
+on("change:repeating_inventory:attuned", function() {
+    update_attuned();
+});
+
 on("change:repeating_inventory:itemmodifiers change:repeating_inventory:equipped", function(eventinfo) {
     if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
         return;
@@ -8601,6 +8625,7 @@ on("remove:repeating_inventory", function(eventinfo) {
     }
 
     update_weight();
+    update_attuned();
 });
 
 on("remove:repeating_attack", function(eventinfo) {
@@ -11723,6 +11748,29 @@ var remove_resource = function(id) {
             });
 
         };
+    });
+};
+
+var update_attuned = function() {
+    log("updating attuned");
+    var update = {};
+    var atotal = 0;
+    var attuned_attrs = [];
+    getSectionIDs("repeating_inventory", function(idarray) {
+        _.each(idarray, function(currentID, i) {
+            attuned_attrs.push("repeating_inventory_" + currentID + "_attuned");
+        });
+        getAttrs(attuned_attrs, function(v) {
+            _.each(idarray, function(currentID, i) {
+                if (v["repeating_inventory_" + currentID + "_attuned"] == 1) {
+                    atotal = atotal + 1;
+                }
+            });
+            update["attunedtotal"] = atotal;
+            setAttrs(update, {
+                silent: true
+            });
+        });
     });
 };
 
