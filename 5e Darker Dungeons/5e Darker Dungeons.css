@@ -3283,9 +3283,9 @@
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "class multiclass custom" "class spell custom" "general attribute skill" "general save skill" "darker save skill";
+  grid-template-areas: "class multiclass custom" "class spell custom" "general attribute skill" "general save skill" "darker save skill" "api api api";
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto auto 1fr; }
+  grid-template-rows: auto auto auto auto 1fr 1fr; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-class {
   grid-area: class; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-gdd {
@@ -3319,12 +3319,16 @@
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-save {
   grid-area: save; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-skill {
-  grid-area: skill; }
+  grid-area: skill; 
+}
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-skill label:not(.sheet-form-checkbox) span {
     opacity: .5; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-skill select {
     width: 80px;
     flex-shrink: 0; }
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-api {
+  grid-area: api; 
+}
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-options label {
   color: black;
   font-size: 13px;

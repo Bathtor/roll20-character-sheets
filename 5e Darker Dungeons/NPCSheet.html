@@ -294,6 +294,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="sheet-form-fieldset">
+                    <div class="sheet-form-fieldset-header">
+                        API Interface
+                    </div>
+                    <div class="sheet-form-fieldset-body">
+                        <textarea name="attr_api_text" placeholder="WARNING: Do NOT put notes in this field! This field should ONLY be used for copy-pasting JSON text for import via the API Script. The Script may arbitrarily overwrite any text in this field!"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -533,7 +541,8 @@
                             </div>
                         </fieldset>
                     </div>
-                </div><input type="checkbox" name="attr_npcreactionsflag" class="sheet-toggle" hidden="" />
+                </div>
+                <input type="hidden" name="attr_npcreactionsflag" class="sheet-field-toggle" />
                 <div class="sheet-toggle-checked">
                     <div class="sheet-container-panel sheet-npc-reactions">
                         <div class="sheet-container-header">
@@ -575,7 +584,8 @@
                             </fieldset>
                         </div>
                     </div>
-                </div><input type="hidden" name="attr_npc_legendary_actions" value="0" class="sheet-field-toggle" />
+                </div>
+                <input type="hidden" name="attr_npc_legendary_actions" value="0" class="sheet-field-toggle" />
                 <div class="sheet-container-panel sheet-npc-legendary-actions">
                     <div class="sheet-container-header">
                         Legendary Actions
